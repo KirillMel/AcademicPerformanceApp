@@ -1,0 +1,6 @@
+framework module Pods_AcademicPerformanceApp {
+  umbrella header "Pods-AcademicPerformanceApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
