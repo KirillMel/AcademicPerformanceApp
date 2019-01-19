@@ -10,6 +10,7 @@
 		C1683044F177049007316317 /* Pods_AcademicPerformanceAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB03C5A43B50C237A60318F /* Pods_AcademicPerformanceAppTests.framework */; };
 		D6E0C654D21FEDFD43E88694 /* Pods_AcademicPerformanceAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB603E1CEB47EE1F207DA81 /* Pods_AcademicPerformanceAppUITests.framework */; };
 		DF5BF0CE684B54605CB7D656 /* Pods_AcademicPerformanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4B18EF17644DB097F0FB7B /* Pods_AcademicPerformanceApp.framework */; };
+		ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED499B1821F21C7F00AF32FD /* LoginViewController.swift */; };
 		EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB47821F0A71000330EE1 /* AppDelegate.swift */; };
 		EDDEB47B21F0A71000330EE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB47A21F0A71000330EE1 /* ViewController.swift */; };
 		EDDEB47E21F0A71000330EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDEB47C21F0A71000330EE1 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		96D511D7E0EF8A3F51769B3E /* Pods-AcademicPerformanceAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademicPerformanceAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AcademicPerformanceAppTests/Pods-AcademicPerformanceAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FB603E1CEB47EE1F207DA81 /* Pods_AcademicPerformanceAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcademicPerformanceAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8790EEB7C012EEFD7576C8C /* Pods-AcademicPerformanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademicPerformanceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcademicPerformanceApp/Pods-AcademicPerformanceApp.debug.xcconfig"; sourceTree = "<group>"; };
+		ED499B1821F21C7F00AF32FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EDDEB47521F0A71000330EE1 /* AcademicPerformanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademicPerformanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDEB47821F0A71000330EE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDDEB47A21F0A71000330EE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,13 +141,15 @@
 		EDDEB47721F0A71000330EE1 /* AcademicPerformanceApp */ = {
 			isa = PBXGroup;
 			children = (
-				EDDEB47821F0A71000330EE1 /* AppDelegate.swift */,
+				EDF9B18121F30EDD00599888 /* app-data */,
+				EDF9B18021F30E4300599888 /* app-ui */,
+				EDF9B17F21F30E1000599888 /* common-utils */,
+				EDF9B17E21F30E0000599888 /* app-settings */,
+				EDF9B17D21F30DDB00599888 /* app-modules */,
 				EDDEB47A21F0A71000330EE1 /* ViewController.swift */,
-				EDDEB47C21F0A71000330EE1 /* Main.storyboard */,
 				EDDEB48221F0A71100330EE1 /* Assets.xcassets */,
-				EDDEB48421F0A71100330EE1 /* LaunchScreen.storyboard */,
 				EDDEB48721F0A71100330EE1 /* Info.plist */,
-				EDDEB47F21F0A71000330EE1 /* AcademicPerformanceApp.xcdatamodeld */,
+				ED499B1821F21C7F00AF32FD /* LoginViewController.swift */,
 			);
 			path = AcademicPerformanceApp;
 			sourceTree = "<group>";
@@ -166,6 +170,45 @@
 				EDDEB49D21F0A71100330EE1 /* Info.plist */,
 			);
 			path = AcademicPerformanceAppUITests;
+			sourceTree = "<group>";
+		};
+		EDF9B17D21F30DDB00599888 /* app-modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "app-modules";
+			sourceTree = "<group>";
+		};
+		EDF9B17E21F30E0000599888 /* app-settings */ = {
+			isa = PBXGroup;
+			children = (
+				EDDEB47821F0A71000330EE1 /* AppDelegate.swift */,
+			);
+			path = "app-settings";
+			sourceTree = "<group>";
+		};
+		EDF9B17F21F30E1000599888 /* common-utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "common-utils";
+			sourceTree = "<group>";
+		};
+		EDF9B18021F30E4300599888 /* app-ui */ = {
+			isa = PBXGroup;
+			children = (
+				EDDEB47C21F0A71000330EE1 /* Main.storyboard */,
+				EDDEB48421F0A71100330EE1 /* LaunchScreen.storyboard */,
+			);
+			path = "app-ui";
+			sourceTree = "<group>";
+		};
+		EDF9B18121F30EDD00599888 /* app-data */ = {
+			isa = PBXGroup;
+			children = (
+				EDDEB47F21F0A71000330EE1 /* AcademicPerformanceApp.xcdatamodeld */,
+			);
+			path = "app-data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */,
 				EDDEB48121F0A71000330EE1 /* AcademicPerformanceApp.xcdatamodeld in Sources */,
 				EDDEB47B21F0A71000330EE1 /* ViewController.swift in Sources */,
 				EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */,
@@ -573,6 +617,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AcademicPerformanceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -591,6 +636,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AcademicPerformanceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

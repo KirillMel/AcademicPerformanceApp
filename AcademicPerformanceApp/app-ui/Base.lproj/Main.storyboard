@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e8U-SK-dQv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="mo8-Zr-dIL">
+            <objects>
+                <viewController storyboardIdentifier="registrationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iQP-yc-u5e" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="76g-ch-vwP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4W-Tr-bLG">
+                                <rect key="frame" x="156" y="511" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="JAd-9h-iud" firstAttribute="bottom" secondItem="h4W-Tr-bLG" secondAttribute="bottom" constant="135" id="6DJ-So-uPU"/>
+                            <constraint firstItem="h4W-Tr-bLG" firstAttribute="leading" secondItem="JAd-9h-iud" secondAttribute="leading" constant="156" id="EmN-7y-kvm"/>
+                            <constraint firstItem="JAd-9h-iud" firstAttribute="trailing" secondItem="h4W-Tr-bLG" secondAttribute="trailing" constant="177" id="Eyx-wt-EMd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JAd-9h-iud"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Agy-1h-TsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8" y="243.32833583208398"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="wGD-Se-hs3">
+            <objects>
+                <viewController storyboardIdentifier="loginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Jyd-TP-luh" customClass="LoginViewController" customModule="AcademicPerformanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLe-Py-beQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hH1-fu-YfY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6O-O4-HKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8" y="-530.28485757121439"/>
+        </scene>
+        <!--Login Register Switcher View Controller-->
+        <scene sceneID="jdv-TC-bQX">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="e8U-SK-dQv" customClass="LoginRegisterSwitcherViewController" customModule="AcademicPerformanceApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C0K-Lv-M7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="-150"/>
+        </scene>
+    </scenes>
+</document>
