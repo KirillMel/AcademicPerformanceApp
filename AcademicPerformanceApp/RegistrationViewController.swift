@@ -1,31 +1,36 @@
 //
-//  LoginViewController.swift
+//  RegistrationViewController.swift
 //  AcademicPerformanceApp
 //
-//  Created by kirill on 1/18/19.
+//  Created by kirill on 1/20/19.
 //  Copyright © 2019 kirill. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class RegistrationViewController: UIViewController {
     
-    //MARK: - Otuletss
-    @IBOutlet weak var loginTextField: UITextField!
+    //MARK: - Outlets
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
     override func viewDidLoad() {
-        configureView()
+        configure()
     }
     
-    func configureView() {
-        loginButton.layer.cornerRadius = MAIN_CORNER_RADIUS
-        setShadow(for: loginButton)
+    func configure() {
+        registerButton.layer.cornerRadius = MAIN_CORNER_RADIUS
+        setShadow(for: registerButton)
         
-        loginTextField.setPaddingWithImage(imageName: "loginIcon")
-        setBorder(for: loginTextField)
-        setShadow(for: loginTextField)
+        usernameTextField.setPaddingWithImage(imageName: "loginIcon")
+        setBorder(for: usernameTextField)
+        setShadow(for: usernameTextField)
+        
+        emailTextField.setPaddingWithImage(imageName: "loginIcon")
+        setBorder(for: emailTextField)
+        setShadow(for: emailTextField)
         
         passwordTextField.setPaddingWithImage(imageName: "passwordIcon")
         setBorder(for: passwordTextField)
@@ -45,5 +50,4 @@ class LoginViewController: UIViewController {
         view.layer.cornerRadius = MAIN_CORNER_RADIUS
         view.layer.borderColor = UIColor.lightGray.cgColor
     }
-    
 }

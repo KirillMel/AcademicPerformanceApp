@@ -21,6 +21,7 @@
 		EDDEB49C21F0A71100330EE1 /* AcademicPerformanceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB49B21F0A71100330EE1 /* AcademicPerformanceAppUITests.swift */; };
 		EDF66BAA21F4703700A4974A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF66BA921F4703700A4974A /* AppConstants.swift */; };
 		EDF66BAD21F487DB00A4974A /* ExtensionUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF66BAC21F487DB00A4974A /* ExtensionUITextField.swift */; };
+		EDF66BAF21F4ABE400A4974A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF66BAE21F4ABE400A4974A /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		EDDEB49D21F0A71100330EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF66BA921F4703700A4974A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		EDF66BAC21F487DB00A4974A /* ExtensionUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUITextField.swift; sourceTree = "<group>"; };
+		EDF66BAE21F4ABE400A4974A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				EDDEB48221F0A71100330EE1 /* Assets.xcassets */,
 				EDDEB48721F0A71100330EE1 /* Info.plist */,
 				ED499B1821F21C7F00AF32FD /* LoginViewController.swift */,
+				EDF66BAE21F4ABE400A4974A /* RegistrationViewController.swift */,
 			);
 			path = AcademicPerformanceApp;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				EDDEB48121F0A71000330EE1 /* AcademicPerformanceApp.xcdatamodeld in Sources */,
 				EDDEB47B21F0A71000330EE1 /* ViewController.swift in Sources */,
 				EDF66BAD21F487DB00A4974A /* ExtensionUITextField.swift in Sources */,
+				EDF66BAF21F4ABE400A4974A /* RegistrationViewController.swift in Sources */,
 				EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */,
 				EDF66BAA21F4703700A4974A /* AppConstants.swift in Sources */,
 			);
