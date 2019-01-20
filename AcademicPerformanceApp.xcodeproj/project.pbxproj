@@ -19,6 +19,8 @@
 		EDDEB48621F0A71100330EE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDEB48421F0A71100330EE1 /* LaunchScreen.storyboard */; };
 		EDDEB49121F0A71100330EE1 /* AcademicPerformanceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB49021F0A71100330EE1 /* AcademicPerformanceAppTests.swift */; };
 		EDDEB49C21F0A71100330EE1 /* AcademicPerformanceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB49B21F0A71100330EE1 /* AcademicPerformanceAppUITests.swift */; };
+		EDF66BAA21F4703700A4974A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF66BA921F4703700A4974A /* AppConstants.swift */; };
+		EDF66BAD21F487DB00A4974A /* ExtensionUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF66BAC21F487DB00A4974A /* ExtensionUITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		EDDEB49721F0A71100330EE1 /* AcademicPerformanceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcademicPerformanceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDEB49B21F0A71100330EE1 /* AcademicPerformanceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicPerformanceAppUITests.swift; sourceTree = "<group>"; };
 		EDDEB49D21F0A71100330EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDF66BA921F4703700A4974A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		EDF66BAC21F487DB00A4974A /* ExtensionUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,14 @@
 			path = AcademicPerformanceAppUITests;
 			sourceTree = "<group>";
 		};
+		EDF66BAB21F4878F00A4974A /* ui-utils */ = {
+			isa = PBXGroup;
+			children = (
+				EDF66BAC21F487DB00A4974A /* ExtensionUITextField.swift */,
+			);
+			path = "ui-utils";
+			sourceTree = "<group>";
+		};
 		EDF9B17D21F30DDB00599888 /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +202,8 @@
 		EDF9B17F21F30E1000599888 /* common-utils */ = {
 			isa = PBXGroup;
 			children = (
+				EDF66BAB21F4878F00A4974A /* ui-utils */,
+				EDF66BA921F4703700A4974A /* AppConstants.swift */,
 			);
 			path = "common-utils";
 			sourceTree = "<group>";
@@ -440,7 +454,9 @@
 				ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */,
 				EDDEB48121F0A71000330EE1 /* AcademicPerformanceApp.xcdatamodeld in Sources */,
 				EDDEB47B21F0A71000330EE1 /* ViewController.swift in Sources */,
+				EDF66BAD21F487DB00A4974A /* ExtensionUITextField.swift in Sources */,
 				EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */,
+				EDF66BAA21F4703700A4974A /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
