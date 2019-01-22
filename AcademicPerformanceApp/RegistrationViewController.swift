@@ -28,7 +28,7 @@ class RegistrationViewController: UIViewController {
         setBorder(for: usernameTextField)
         setShadow(for: usernameTextField)
         
-        emailTextField.setPaddingWithImage(imageName: "loginIcon")
+        emailTextField.setPaddingWithImage(imageName: "emailIcon")
         setBorder(for: emailTextField)
         setShadow(for: emailTextField)
         
