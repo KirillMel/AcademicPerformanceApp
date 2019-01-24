@@ -16,8 +16,8 @@ class LoginRegisterSwitcherViewController: UIPageViewController, UIScrollViewDel
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         // The view controllers will be shown in this order
-        return [self.newColoredViewController("loginViewController"),
-                self.newColoredViewController("registrationViewController")]
+        return [self.newChildViewController("loginViewController"),
+                self.newChildViewController("registrationViewController")]
     }()
     
     override func viewDidLoad() {
@@ -86,7 +86,7 @@ class LoginRegisterSwitcherViewController: UIPageViewController, UIScrollViewDel
         }
     }
     
-    func newColoredViewController(_ color: String) -> UIViewController {
+    func newChildViewController(_ color: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil) .
             instantiateViewController(withIdentifier: color)
     }
@@ -132,14 +132,14 @@ extension LoginRegisterSwitcherViewController: UIPageViewControllerDataSource {
         // User is on the first view controller and swiped left to loop to
         // the last view controller.
         guard previousIndex >= 0 else {
-            self.visibleView=1
+            self.visibleView = 1
             return orderedViewControllers.last
         }
         
         guard orderedViewControllers.count > previousIndex else {
             return nil
         }
-        self.visibleView=0
+        self.visibleView = 0
         return orderedViewControllers[previousIndex]
     }
     
@@ -153,14 +153,14 @@ extension LoginRegisterSwitcherViewController: UIPageViewControllerDataSource {
         // User is on the last view controller and swiped right to loop to
         // the first view controller.
         guard orderedViewControllersCount != nextIndex else {
-            self.visibleView=0
+            self.visibleView = 0
             return orderedViewControllers.first
         }
         
         guard orderedViewControllersCount > nextIndex else {
             return nil
         }
-        self.visibleView=1
+        self.visibleView = 1
         return orderedViewControllers[nextIndex]
     }
     
