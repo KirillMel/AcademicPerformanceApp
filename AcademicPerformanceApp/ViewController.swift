@@ -9,10 +9,21 @@
 import UIKit
 
 class LoginRegisterSwitcherViewController: UIPageViewController, UIScrollViewDelegate {
-    
+    //MARK: - Variables and objects
     weak var switcherDelegate: SwitcherPageViewControllerDelegate?
     var mainImageView = UIImageView(image: UIImage(named: "LoginImage")!)
     var visibleView:Int = 0
+    
+    var signInLabel: UILabel?
+    var registrationLabel: UILabel?
+    var headerView: UIView?
+    
+    //MARK: - Constants
+    let maxRectForRegisterLabel: CGFloat = 195.0
+    let heightOfRegistrationLabel: CGFloat = 60.0
+    let widthOfRegistrationLabel: CGFloat = 145.0
+    let namewidthOfRegistrationLabelWithPadding: CGFloat = 155.0
+    
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         // The view controllers will be shown in this order
@@ -29,6 +40,30 @@ class LoginRegisterSwitcherViewController: UIPageViewController, UIScrollViewDel
         mainImageView.frame = UIScreen.main.bounds
         mainImageView.contentMode = .scaleAspectFill
         view.insertSubview(mainImageView, at: 0)
+        
+        //Constants for headerView
+        let precentageOfView: CGFloat = 0.31
+        let heightSignInLabel: CGFloat = 70.0
+        let xPositionOfSignInLabel: CGFloat = 20.0
+        let widthForSignInLabel: CGFloat = 150.0
+        
+        headerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.width, height: view.frame.height * precentageOfView))
+        headerView?.backgroundColor = UIColor.clear
+        
+        signInLabel = UILabel(frame: CGRect(x: xPositionOfSignInLabel, y: headerView!.frame.height - heightSignInLabel, width: widthForSignInLabel, height: heightSignInLabel))
+        signInLabel?.textColor = COLORS_PALETTE.last
+        signInLabel?.text = "Sign In"
+        signInLabel?.font = UIFont(name: "noteworthy-bold", size: MAX_FONT_SIZE)
+        
+        registrationLabel = UILabel(frame: CGRect(x: headerView!.frame.width - namewidthOfRegistrationLabelWithPadding, y: headerView!.frame.height - heightOfRegistrationLabel - 2, width: widthOfRegistrationLabel, height: heightOfRegistrationLabel))
+        registrationLabel?.textColor = COLORS_PALETTE.first
+        registrationLabel?.text = "Registration"
+        registrationLabel?.font = UIFont(name: "noteworthy-bold", size: MIN_FONT_SIZE)
+        
+        headerView?.insertSubview(signInLabel!, at: 0)
+        headerView?.insertSubview(registrationLabel!, at: 0)
+        
+        view.insertSubview(headerView!, at: 1)
         
         if let initialViewController = orderedViewControllers.first {
             scrollToViewController(viewController: initialViewController)
@@ -57,8 +92,44 @@ class LoginRegisterSwitcherViewController: UIPageViewController, UIScrollViewDel
         let index = Int(xPositionOfScroll / k)
         
         let val = (xPositionOfScroll / sceneWidth) * (MAX_FONT_SIZE - MIN_FONT_SIZE)
-        (orderedViewControllers[0] as! LoginViewController).animateView(type: visibleView, value: val, index: index)
-        (orderedViewControllers[1] as! RegistrationViewController).animateView(type: visibleView, value: val, index: index)
+        //(orderedViewControllers[0] as! LoginViewController).animateView(type: visibleView, value: val, index: index)
+        //(orderedViewControllers[1] as! RegistrationViewController).animateView(type: visibleView, value: val, index: index)
+        animateView(type: visibleView, value: val, index: index)
+    }
+    
+    func animateView(type: Int,value: CGFloat, index: Int) {
+        guard signInLabel != nil else { return }
+        guard index > 0 && index < COLORS_PALETTE.count else { return }
+        
+        let coefficient: CGFloat = 5.0
+        
+        switch type
+        {
+        case 0:
+            if (MAX_FONT_SIZE>signInLabel!.font.pointSize) {
+                signInLabel?.font = signInLabel!.font.withSize(MIN_FONT_SIZE + value)
+                signInLabel!.textColor = COLORS_PALETTE[index]
+            }
+            if (MIN_FONT_SIZE<registrationLabel!.font.pointSize) {
+                registrationLabel!.font = registrationLabel!.font.withSize(MAX_FONT_SIZE - value)
+                registrationLabel!.textColor = COLORS_PALETTE[COLORS_PALETTE.count - index - 1]
+                registrationLabel!.frame = CGRect(x: headerView!.frame.width - maxRectForRegisterLabel - 10 + value * coefficient, y: headerView!.frame.height - heightOfRegistrationLabel - 2, width: maxRectForRegisterLabel - value * coefficient, height: heightOfRegistrationLabel)
+            }
+            break;
+        case 1:
+            if (MAX_FONT_SIZE>registrationLabel!.font.pointSize) {
+                registrationLabel!.font = registrationLabel!.font.withSize(MIN_FONT_SIZE + value)
+                registrationLabel!.textColor = COLORS_PALETTE[index]
+                registrationLabel!.frame = CGRect(x: headerView!.frame.width - namewidthOfRegistrationLabelWithPadding - value * coefficient, y: headerView!.frame.height - heightOfRegistrationLabel - 2, width: widthOfRegistrationLabel + value * coefficient, height: heightOfRegistrationLabel)
+            }
+            if (MIN_FONT_SIZE<signInLabel!.font.pointSize) {
+                signInLabel!.font = signInLabel!.font.withSize(MAX_FONT_SIZE - value)
+                signInLabel!.textColor = COLORS_PALETTE[COLORS_PALETTE.count - index - 1]
+            }
+            break;
+        default:
+            break;
+        }
     }
     
     /**
@@ -112,7 +183,7 @@ class LoginRegisterSwitcherViewController: UIPageViewController, UIScrollViewDel
     private func notifySwitcherDelegateOfNewIndex() {
         if let firstViewController = viewControllers?.first,
             let index = orderedViewControllers.firstIndex(of: firstViewController) {
-            switcherDelegate?.tutorialPageViewController(tutorialPageViewController: self, didUpdatePageIndex: index)
+            switcherDelegate?.switcherPageViewController(switcherPageViewController: self, didUpdatePageIndex: index)
         }
     }
     
@@ -194,7 +265,7 @@ protocol SwitcherPageViewControllerDelegate: class {
      - parameter tutorialPageViewController: the TutorialPageViewController instance
      - parameter index: the index of the currently visible page.
      */
-    func tutorialPageViewController(tutorialPageViewController: LoginRegisterSwitcherViewController,
+    func switcherPageViewController(switcherPageViewController: LoginRegisterSwitcherViewController,
                                     didUpdatePageIndex index: Int)
     
 }

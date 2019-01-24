@@ -39,6 +39,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         setShadow(for: passwordTextField)
         
         signInLabel.textColor = COLORS_PALETTE.last
+        signInLabel.isHidden = true;
         registrationLabel.textColor = COLORS_PALETTE.first
     }
     
@@ -73,36 +74,5 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-    }
-}
-
-//For Control UI from uipageViewController
-extension LoginViewController {
-    func animateView(type: Int, value: CGFloat, index: Int) {
-        switch type
-        {
-            case 0:
-                if (MAX_FONT_SIZE>signInLabel.font.pointSize) {
-                    signInLabel.font = signInLabel.font.withSize(MIN_FONT_SIZE + value)
-                    signInLabel.textColor = COLORS_PALETTE[index]
-                }
-                if (MIN_FONT_SIZE<registrationLabel.font.pointSize) {
-                    registrationLabel.font = registrationLabel.font.withSize(MAX_FONT_SIZE - value)
-                    registrationLabel.textColor = COLORS_PALETTE[COLORS_PALETTE.count - index - 1]
-                }
-                break;
-            case 1:
-                if (MAX_FONT_SIZE>registrationLabel.font.pointSize) {
-                    registrationLabel.font = registrationLabel.font.withSize(MIN_FONT_SIZE + value)
-                    registrationLabel.textColor = COLORS_PALETTE[index]
-                }
-                if (MIN_FONT_SIZE<signInLabel.font.pointSize) {
-                    signInLabel.font = signInLabel.font.withSize(MAX_FONT_SIZE - value)
-                    signInLabel.textColor = COLORS_PALETTE[COLORS_PALETTE.count - index - 1]
-                }
-                break;
-            default:
-                break;
-        }
     }
 }

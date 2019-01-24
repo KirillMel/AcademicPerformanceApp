@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController, RegistrationViewProtocol {
     
     //MARK: - Outlets
     @IBOutlet weak var usernameTextField: UITextField!
@@ -54,37 +54,5 @@ class RegistrationViewController: UIViewController {
         view.layer.borderWidth = MAIN_BORDER_WIDTH_FOR_FRAMES
         view.layer.cornerRadius = MAIN_CORNER_RADIUS
         view.layer.borderColor = UIColor.lightGray.cgColor
-    }
-}
-
-//For Control UI from uipageViewController
-extension RegistrationViewController {
-    func animateView(type: Int,value: CGFloat, index: Int) {
-        if (signInLabel==nil) { return }
-        switch type
-        {
-            case 0:
-                if (MAX_FONT_SIZE>signInLabel.font.pointSize) {
-                    signInLabel.font = signInLabel.font.withSize(MIN_FONT_SIZE + value)
-                    signInLabel.textColor = COLORS_PALETTE[index]
-                }
-                if (MIN_FONT_SIZE<registrationLabel.font.pointSize) {
-                    registrationLabel.font = registrationLabel.font.withSize(MAX_FONT_SIZE - value)
-                    registrationLabel.textColor = COLORS_PALETTE[COLORS_PALETTE.count - index - 1]
-                  }
-                  break;
-            case 1:
-                if (MAX_FONT_SIZE>registrationLabel.font.pointSize) {
-                    registrationLabel.font = registrationLabel.font.withSize(MIN_FONT_SIZE + value)
-                    registrationLabel.textColor = COLORS_PALETTE[index]
-                }
-                if (MIN_FONT_SIZE<signInLabel.font.pointSize) {
-                    signInLabel.font = signInLabel.font.withSize(MAX_FONT_SIZE - value)
-                    signInLabel.textColor = COLORS_PALETTE[COLORS_PALETTE.count - index - 1]
-                }
-                break;
-            default:
-                break;
-        }
     }
 }

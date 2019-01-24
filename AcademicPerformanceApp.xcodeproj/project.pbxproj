@@ -15,6 +15,15 @@
 		ED6FF5C921F6506500E717D9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6FF5C821F6506500E717D9 /* AuthService.swift */; };
 		ED819BC521F60F5E007956F3 /* ErrorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED819BC421F60F5E007956F3 /* ErrorsExtension.swift */; };
 		ED819BC721F61A9A007956F3 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED819BC621F61A9A007956F3 /* ValidationService.swift */; };
+		ED9ED44D21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED44C21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift */; };
+		ED9ED44F21F9E6F700761C09 /* RegistrationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED44E21F9E6F700761C09 /* RegistrationConfigurator.swift */; };
+		ED9ED45121F9E71100761C09 /* RegistrationInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45021F9E71100761C09 /* RegistrationInteractorProtocol.swift */; };
+		ED9ED45321F9E71F00761C09 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45221F9E71F00761C09 /* RegistrationInteractor.swift */; };
+		ED9ED45521F9E72D00761C09 /* RegistrationPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45421F9E72D00761C09 /* RegistrationPresenterProtocol.swift */; };
+		ED9ED45721F9E73B00761C09 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45621F9E73B00761C09 /* RegistrationPresenter.swift */; };
+		ED9ED45921F9E74C00761C09 /* RegistrationRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45821F9E74C00761C09 /* RegistrationRouterProtocol.swift */; };
+		ED9ED45B21F9E75600761C09 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45A21F9E75600761C09 /* RegistrationRouter.swift */; };
+		ED9ED45D21F9E76500761C09 /* RegistrationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45C21F9E76500761C09 /* RegistrationViewProtocol.swift */; };
 		EDD7392321F6FEC600CAC9FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7392221F6FEC600CAC9FD /* User.swift */; };
 		EDD7392521F7297E00CAC9FD /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7392421F7297E00CAC9FD /* ServerService.swift */; };
 		EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB47821F0A71000330EE1 /* AppDelegate.swift */; };
@@ -71,6 +80,15 @@
 		ED6FF5C821F6506500E717D9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		ED819BC421F60F5E007956F3 /* ErrorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsExtension.swift; sourceTree = "<group>"; };
 		ED819BC621F61A9A007956F3 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
+		ED9ED44C21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationConfiguratorProtocol.swift; sourceTree = "<group>"; };
+		ED9ED44E21F9E6F700761C09 /* RegistrationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationConfigurator.swift; sourceTree = "<group>"; };
+		ED9ED45021F9E71100761C09 /* RegistrationInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInteractorProtocol.swift; sourceTree = "<group>"; };
+		ED9ED45221F9E71F00761C09 /* RegistrationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInteractor.swift; sourceTree = "<group>"; };
+		ED9ED45421F9E72D00761C09 /* RegistrationPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenterProtocol.swift; sourceTree = "<group>"; };
+		ED9ED45621F9E73B00761C09 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		ED9ED45821F9E74C00761C09 /* RegistrationRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouterProtocol.swift; sourceTree = "<group>"; };
+		ED9ED45A21F9E75600761C09 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
+		ED9ED45C21F9E76500761C09 /* RegistrationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewProtocol.swift; sourceTree = "<group>"; };
 		EDD7392221F6FEC600CAC9FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EDD7392421F7297E00CAC9FD /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
 		EDDEB47521F0A71000330EE1 /* AcademicPerformanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademicPerformanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +170,71 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ED9ED44521F9E5FB00761C09 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				ED9ED44621F9E61C00761C09 /* RegistrationConfigurator */,
+				ED9ED44A21F9E65E00761C09 /* RegistrationEntity */,
+				ED9ED44821F9E64300761C09 /* RegistrationInteractor */,
+				ED9ED44921F9E65000761C09 /* RegistrationPresenter */,
+				ED9ED44B21F9E66900761C09 /* RegistrationRouter */,
+				ED9ED44721F9E62F00761C09 /* RegistrationView */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		ED9ED44621F9E61C00761C09 /* RegistrationConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				ED9ED44C21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift */,
+				ED9ED44E21F9E6F700761C09 /* RegistrationConfigurator.swift */,
+			);
+			path = RegistrationConfigurator;
+			sourceTree = "<group>";
+		};
+		ED9ED44721F9E62F00761C09 /* RegistrationView */ = {
+			isa = PBXGroup;
+			children = (
+				EDF66BAE21F4ABE400A4974A /* RegistrationViewController.swift */,
+				ED9ED45C21F9E76500761C09 /* RegistrationViewProtocol.swift */,
+			);
+			path = RegistrationView;
+			sourceTree = "<group>";
+		};
+		ED9ED44821F9E64300761C09 /* RegistrationInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				ED9ED45021F9E71100761C09 /* RegistrationInteractorProtocol.swift */,
+				ED9ED45221F9E71F00761C09 /* RegistrationInteractor.swift */,
+			);
+			path = RegistrationInteractor;
+			sourceTree = "<group>";
+		};
+		ED9ED44921F9E65000761C09 /* RegistrationPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED9ED45421F9E72D00761C09 /* RegistrationPresenterProtocol.swift */,
+				ED9ED45621F9E73B00761C09 /* RegistrationPresenter.swift */,
+			);
+			path = RegistrationPresenter;
+			sourceTree = "<group>";
+		};
+		ED9ED44A21F9E65E00761C09 /* RegistrationEntity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RegistrationEntity;
+			sourceTree = "<group>";
+		};
+		ED9ED44B21F9E66900761C09 /* RegistrationRouter */ = {
+			isa = PBXGroup;
+			children = (
+				ED9ED45821F9E74C00761C09 /* RegistrationRouterProtocol.swift */,
+				ED9ED45A21F9E75600761C09 /* RegistrationRouter.swift */,
+			);
+			path = RegistrationRouter;
+			sourceTree = "<group>";
+		};
 		EDDEB46C21F0A71000330EE1 = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +269,6 @@
 				EDDEB47A21F0A71000330EE1 /* ViewController.swift */,
 				EDDEB48221F0A71100330EE1 /* Assets.xcassets */,
 				EDDEB48721F0A71100330EE1 /* Info.plist */,
-				EDF66BAE21F4ABE400A4974A /* RegistrationViewController.swift */,
 			);
 			path = AcademicPerformanceApp;
 			sourceTree = "<group>";
@@ -222,11 +304,11 @@
 			isa = PBXGroup;
 			children = (
 				EDF66BB821F4D1DF00A4974A /* LoginConfigurator */,
-				EDF66BB721F4D1D000A4974A /* LoginView */,
+				EDF66BB421F4CF8E00A4974A /* LoginEntity */,
 				EDF66BB621F4CF9B00A4974A /* LoginInteractor */,
 				EDF66BB521F4CF9600A4974A /* LoginPresenter */,
-				EDF66BB421F4CF8E00A4974A /* LoginEntity */,
 				EDF66BB321F4CF8800A4974A /* LoginRouter */,
+				EDF66BB721F4D1D000A4974A /* LoginView */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -297,6 +379,7 @@
 		EDF9B17D21F30DDB00599888 /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
+				ED9ED44521F9E5FB00761C09 /* Registration */,
 				EDF66BB221F4CEED00A4974A /* Login */,
 			);
 			path = "app-modules";
@@ -566,25 +649,34 @@
 				EDF66BBE21F4D62A00A4974A /* LoginViewProtocol.swift in Sources */,
 				ED819BC521F60F5E007956F3 /* ErrorsExtension.swift in Sources */,
 				EDD7392521F7297E00CAC9FD /* ServerService.swift in Sources */,
+				ED9ED44D21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift in Sources */,
 				ED819BC721F61A9A007956F3 /* ValidationService.swift in Sources */,
 				EDF66BBA21F4D5B000A4974A /* LoginConfiguratorProtocol.swift in Sources */,
 				EDF66BC821F4D6ED00A4974A /* LoginPresenter.swift in Sources */,
+				ED9ED44F21F9E6F700761C09 /* RegistrationConfigurator.swift in Sources */,
 				ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */,
 				EDDEB48121F0A71000330EE1 /* AcademicPerformanceApp.xcdatamodeld in Sources */,
 				EDDEB47B21F0A71000330EE1 /* ViewController.swift in Sources */,
 				EDD7392321F6FEC600CAC9FD /* User.swift in Sources */,
+				ED9ED45521F9E72D00761C09 /* RegistrationPresenterProtocol.swift in Sources */,
 				ED6FF5C921F6506500E717D9 /* AuthService.swift in Sources */,
 				EDF66BCC21F4D71800A4974A /* LoginRouter.swift in Sources */,
 				EDF66BAD21F487DB00A4974A /* ExtensionUITextField.swift in Sources */,
 				EDF66BAF21F4ABE400A4974A /* RegistrationViewController.swift in Sources */,
 				EDF66BC621F4D6D400A4974A /* LoginPresenterProtocol.swift in Sources */,
+				ED9ED45321F9E71F00761C09 /* RegistrationInteractor.swift in Sources */,
+				ED9ED45D21F9E76500761C09 /* RegistrationViewProtocol.swift in Sources */,
 				EDF66BBC21F4D5C900A4974A /* LoginConfigurator.swift in Sources */,
+				ED9ED45121F9E71100761C09 /* RegistrationInteractorProtocol.swift in Sources */,
+				ED9ED45721F9E73B00761C09 /* RegistrationPresenter.swift in Sources */,
 				EDF66BC421F4D6BD00A4974A /* LoginInteractor.swift in Sources */,
 				EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */,
 				EDF66BCA21F4D70800A4974A /* LoginRouterProtocol.swift in Sources */,
 				EDF66BC021F4D68D00A4974A /* LoginInteractorProtocol.swift in Sources */,
+				ED9ED45921F9E74C00761C09 /* RegistrationRouterProtocol.swift in Sources */,
 				EDF66BAA21F4703700A4974A /* AppConstants.swift in Sources */,
 				ED1A414621F9BF760005A877 /* ExtensionUIColor.swift in Sources */,
+				ED9ED45B21F9E75600761C09 /* RegistrationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
