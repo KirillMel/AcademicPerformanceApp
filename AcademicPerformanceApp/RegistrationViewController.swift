@@ -15,6 +15,8 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var signInLabel: UILabel!
+    @IBOutlet weak var registrationLabel: UILabel!
     
     override func viewDidLoad() {
         configure()
@@ -35,6 +37,9 @@ class RegistrationViewController: UIViewController {
         passwordTextField.setPaddingWithImage(imageName: "passwordIcon")
         setBorder(for: passwordTextField)
         setShadow(for: passwordTextField)
+        
+        signInLabel.textColor = COLORS_PALETTE.last
+        registrationLabel.textColor = COLORS_PALETTE.first
     }
     
     func setShadow(for view:UIView) {
@@ -49,5 +54,37 @@ class RegistrationViewController: UIViewController {
         view.layer.borderWidth = MAIN_BORDER_WIDTH_FOR_FRAMES
         view.layer.cornerRadius = MAIN_CORNER_RADIUS
         view.layer.borderColor = UIColor.lightGray.cgColor
+    }
+}
+
+//For Control UI from uipageViewController
+extension RegistrationViewController {
+    func animateView(type: Int,value: CGFloat, index: Int) {
+        if (signInLabel==nil) { return }
+        switch type
+        {
+            case 0:
+                if (MAX_FONT_SIZE>signInLabel.font.pointSize) {
+                    signInLabel.font = signInLabel.font.withSize(MIN_FONT_SIZE + value)
+                    signInLabel.textColor = COLORS_PALETTE[index]
+                }
+                if (MIN_FONT_SIZE<registrationLabel.font.pointSize) {
+                    registrationLabel.font = registrationLabel.font.withSize(MAX_FONT_SIZE - value)
+                    registrationLabel.textColor = COLORS_PALETTE[COLORS_PALETTE.count - index - 1]
+                  }
+                  break;
+            case 1:
+                if (MAX_FONT_SIZE>registrationLabel.font.pointSize) {
+                    registrationLabel.font = registrationLabel.font.withSize(MIN_FONT_SIZE + value)
+                    registrationLabel.textColor = COLORS_PALETTE[index]
+                }
+                if (MIN_FONT_SIZE<signInLabel.font.pointSize) {
+                    signInLabel.font = signInLabel.font.withSize(MAX_FONT_SIZE - value)
+                    signInLabel.textColor = COLORS_PALETTE[COLORS_PALETTE.count - index - 1]
+                }
+                break;
+            default:
+                break;
+        }
     }
 }

@@ -8,10 +8,11 @@
 
 import UIKit
 
-class LoginRegisterSwitcherViewController: UIPageViewController {
+class LoginRegisterSwitcherViewController: UIPageViewController, UIScrollViewDelegate {
     
-    weak var tutorialDelegate: TutorialPageViewControllerDelegate?
+    weak var switcherDelegate: SwitcherPageViewControllerDelegate?
     var mainImageView = UIImageView(image: UIImage(named: "LoginImage")!)
+    var visibleView:Int = 0
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         // The view controllers will be shown in this order
@@ -33,7 +34,31 @@ class LoginRegisterSwitcherViewController: UIPageViewController {
             scrollToViewController(viewController: initialViewController)
         }
         
-        tutorialDelegate?.tutorialPageViewController(tutorialPageViewController: self, didUpdatePageCount: orderedViewControllers.count)
+        for v in view.subviews{
+            if let scrollView = v as? UIScrollView {
+                    scrollView.delegate = self
+            }
+        }
+        
+        switcherDelegate?.switcherPageViewController(swithcerPageViewController: self, didUpdatePageCount: orderedViewControllers.count)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        var xPositionOfScroll = scrollView.contentOffset.x
+        let sceneWidth = view.frame.width
+        if (xPositionOfScroll>sceneWidth) {
+            xPositionOfScroll -= sceneWidth
+        } else{
+            xPositionOfScroll = sceneWidth - xPositionOfScroll
+        }
+        guard xPositionOfScroll > 0, xPositionOfScroll != sceneWidth else { return }
+        
+        let k = sceneWidth / CGFloat(COLORS_PALETTE.count)
+        let index = Int(xPositionOfScroll / k)
+        
+        let val = (xPositionOfScroll / sceneWidth) * (MAX_FONT_SIZE - MIN_FONT_SIZE)
+        (orderedViewControllers[0] as! LoginViewController).animateView(type: visibleView, value: val, index: index)
+        (orderedViewControllers[1] as! RegistrationViewController).animateView(type: visibleView, value: val, index: index)
     }
     
     /**
@@ -79,18 +104,15 @@ class LoginRegisterSwitcherViewController: UIPageViewController {
                            completion: { (finished) -> Void in
                             // Setting the view controller programmatically does not fire
                             // any delegate methods, so we have to manually notify the
-                            // 'tutorialDelegate' of the new index.
+                            // 'Delegate' of the new index.
                             self.notifySwitcherDelegateOfNewIndex()
         })
     }
     
-    /**
-     Notifies '_tutorialDelegate' that the current page index was updated.
-     */
     private func notifySwitcherDelegateOfNewIndex() {
         if let firstViewController = viewControllers?.first,
             let index = orderedViewControllers.firstIndex(of: firstViewController) {
-            tutorialDelegate?.tutorialPageViewController(tutorialPageViewController: self, didUpdatePageIndex: index)
+            switcherDelegate?.tutorialPageViewController(tutorialPageViewController: self, didUpdatePageIndex: index)
         }
     }
     
@@ -110,21 +132,20 @@ extension LoginRegisterSwitcherViewController: UIPageViewControllerDataSource {
         // User is on the first view controller and swiped left to loop to
         // the last view controller.
         guard previousIndex >= 0 else {
+            self.visibleView=1
             return orderedViewControllers.last
         }
         
         guard orderedViewControllers.count > previousIndex else {
             return nil
         }
-        
+        self.visibleView=0
         return orderedViewControllers[previousIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
-            return nil
-        }
+        guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else { return nil }
         
         let nextIndex = viewControllerIndex + 1
         let orderedViewControllersCount = orderedViewControllers.count
@@ -132,13 +153,14 @@ extension LoginRegisterSwitcherViewController: UIPageViewControllerDataSource {
         // User is on the last view controller and swiped right to loop to
         // the first view controller.
         guard orderedViewControllersCount != nextIndex else {
+            self.visibleView=0
             return orderedViewControllers.first
         }
         
         guard orderedViewControllersCount > nextIndex else {
             return nil
         }
-        
+        self.visibleView=1
         return orderedViewControllers[nextIndex]
     }
     
@@ -155,7 +177,7 @@ extension LoginRegisterSwitcherViewController: UIPageViewControllerDelegate {
     
 }
 
-protocol TutorialPageViewControllerDelegate: class {
+protocol SwitcherPageViewControllerDelegate: class {
     
     /**
      Called when the number of pages is updated.
@@ -163,7 +185,7 @@ protocol TutorialPageViewControllerDelegate: class {
      - parameter tutorialPageViewController: the TutorialPageViewController instance
      - parameter count: the total number of pages.
      */
-    func tutorialPageViewController(tutorialPageViewController: LoginRegisterSwitcherViewController,
+    func switcherPageViewController(swithcerPageViewController: LoginRegisterSwitcherViewController,
                                     didUpdatePageCount count: Int)
     
     /**

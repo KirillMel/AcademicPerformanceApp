@@ -124,6 +124,8 @@
                         <outlet property="emailTextField" destination="a2W-3r-iy8" id="agP-kD-qef"/>
                         <outlet property="passwordTextField" destination="ZWi-G7-5ec" id="0pH-vb-nts"/>
                         <outlet property="registerButton" destination="g7t-mS-Hq3" id="wqx-pH-ftX"/>
+                        <outlet property="registrationLabel" destination="X9b-2Y-OGh" id="tvo-6O-CkM"/>
+                        <outlet property="signInLabel" destination="JJL-aa-FBy" id="Tn6-uN-4RV"/>
                         <outlet property="usernameTextField" destination="Hsr-B8-lwt" id="Q9G-04-gfQ"/>
                     </connections>
                 </viewController>
@@ -245,6 +247,8 @@
                         <outlet property="loginButton" destination="ahu-PJ-zVD" id="0Hp-TB-Rsh"/>
                         <outlet property="loginTextField" destination="F25-fZ-bpa" id="CoD-9z-IKc"/>
                         <outlet property="passwordTextField" destination="pGc-2U-Btw" id="iga-hk-WDG"/>
+                        <outlet property="registrationLabel" destination="Stp-tO-gsY" id="mOD-he-AT8"/>
+                        <outlet property="signInLabel" destination="N5Y-dN-bvw" id="hs3-2u-mX5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6O-O4-HKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
