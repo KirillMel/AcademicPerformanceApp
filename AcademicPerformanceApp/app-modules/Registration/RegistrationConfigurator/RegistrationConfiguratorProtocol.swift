@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RegistrationConfiguratorProtocol: class {
-    
+    func configure(with viewController: RegistrationViewProtocol) -> Void
 }

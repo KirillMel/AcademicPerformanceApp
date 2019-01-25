@@ -15,6 +15,8 @@ protocol AuthServiceProtocol: class {
     var user: User? {get}
     
     func loginWithAPICall(route: String, username: String, password: String) -> Bool
+    
+    func registerWithAPICall(route: String, username: String, email: String, password: String) -> Bool
 }
 
 class RemoteAuthService: AuthServiceProtocol {
@@ -24,7 +26,7 @@ class RemoteAuthService: AuthServiceProtocol {
     var error: Error?
     
     func loginWithAPICall(route: String, username: String, password: String) -> Bool {
-        
+        let body = ["username": username, "password": password]  //tmp
         let group = DispatchGroup()
         group.enter()
         DispatchQueue.global(qos: .default).async {
@@ -35,6 +37,22 @@ class RemoteAuthService: AuthServiceProtocol {
             }
         }
     
+        group.wait()
+        return false
+    }
+    
+    func registerWithAPICall(route: String, username: String, email: String, password: String) -> Bool {
+        let body = ["username": username, "email": email,"password": password]  //tmp
+        let group = DispatchGroup()
+        group.enter()
+        DispatchQueue.global(qos: .default).async {
+            self.serverService.connectToAPI(with: self.serverService.prepareURLRequest(with: route, method: RequestMethod.get, body: nil)){ (output)  in
+                //print(String(data: output, encoding: .utf8))
+                self.parseResult(for: output)
+                group.leave()
+            }
+        }
+        
         group.wait()
         return false
     }

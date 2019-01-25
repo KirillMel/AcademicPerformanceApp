@@ -9,5 +9,13 @@
 import Foundation
 
 class RegistrationRouter: RegistrationRouterProtocol {
+    weak var viewController: RegistrationViewProtocol!
     
+    init(viewController: RegistrationViewProtocol) {
+        self.viewController = viewController
+    }
+    
+    func moveInsideApp() {
+        
+    }
 }

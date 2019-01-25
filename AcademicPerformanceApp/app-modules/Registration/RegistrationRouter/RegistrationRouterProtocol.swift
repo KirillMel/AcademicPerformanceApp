@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol RegistrationRouterProtocol {
-    
+protocol RegistrationRouterProtocol: class {
+    func moveInsideApp() -> Void
 }

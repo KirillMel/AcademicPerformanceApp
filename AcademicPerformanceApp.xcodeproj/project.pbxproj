@@ -260,15 +260,15 @@
 		EDDEB47721F0A71000330EE1 /* AcademicPerformanceApp */ = {
 			isa = PBXGroup;
 			children = (
-				EDF66BCD21F4E31D00A4974A /* app-services */,
 				EDF9B18121F30EDD00599888 /* app-data */,
-				EDF9B18021F30E4300599888 /* app-ui */,
-				EDF9B17F21F30E1000599888 /* common-utils */,
-				EDF9B17E21F30E0000599888 /* app-settings */,
 				EDF9B17D21F30DDB00599888 /* app-modules */,
-				EDDEB47A21F0A71000330EE1 /* ViewController.swift */,
+				EDF66BCD21F4E31D00A4974A /* app-services */,
+				EDF9B17E21F30E0000599888 /* app-settings */,
+				EDF9B18021F30E4300599888 /* app-ui */,
 				EDDEB48221F0A71100330EE1 /* Assets.xcassets */,
+				EDF9B17F21F30E1000599888 /* common-utils */,
 				EDDEB48721F0A71100330EE1 /* Info.plist */,
+				EDDEB47A21F0A71000330EE1 /* ViewController.swift */,
 			);
 			path = AcademicPerformanceApp;
 			sourceTree = "<group>";

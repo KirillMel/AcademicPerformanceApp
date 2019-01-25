@@ -9,5 +9,14 @@
 import Foundation
 
 class RegistrationConfigurator: RegistrationConfiguratorProtocol {
-    
+    func configure(with viewController: RegistrationViewProtocol) {
+        let viewControllerUnwrap = viewController as? RegistrationViewController
+        let presenter: RegistrationPresenterProtocol! = RegistrationPresenter(viewController: viewControllerUnwrap!)
+        let interactor: RegistrationInteractorProtocol! = RegistrationInteractor(presenter: presenter)
+        let router: RegistrationRouterProtocol! = RegistrationRouter(viewController: viewControllerUnwrap!)
+        
+        viewControllerUnwrap?.presenter = presenter
+        presenter.interactor = interactor
+        presenter.router = router
+    }
 }

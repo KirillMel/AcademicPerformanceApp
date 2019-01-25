@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RegistrationInteractorProtocol: class {
-    
+    func performRegistration(username: String, email:String, password: String) -> Void
 }

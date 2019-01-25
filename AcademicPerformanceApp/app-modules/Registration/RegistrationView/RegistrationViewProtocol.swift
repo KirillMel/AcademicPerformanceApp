@@ -8,6 +8,10 @@
 
 import Foundation
 
-protocol RegistrationViewProtocol {
+protocol RegistrationViewProtocol: class {
+    func configureView(with username: String, email: String) -> Void
     
+    func performRegistration(username: String?, email: String?, password: String?) -> Void
+    
+    func showError(error: String) -> Void
 }

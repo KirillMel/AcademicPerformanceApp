@@ -92,8 +92,6 @@ class LoginRegisterSwitcherViewController: UIPageViewController, UIScrollViewDel
         let index = Int(xPositionOfScroll / k)
         
         let val = (xPositionOfScroll / sceneWidth) * (MAX_FONT_SIZE - MIN_FONT_SIZE)
-        //(orderedViewControllers[0] as! LoginViewController).animateView(type: visibleView, value: val, index: index)
-        //(orderedViewControllers[1] as! RegistrationViewController).animateView(type: visibleView, value: val, index: index)
         animateView(type: visibleView, value: val, index: index)
     }
     
