@@ -18,8 +18,6 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet weak var signInLabel: UILabel!
-    @IBOutlet weak var registrationLabel: UILabel!
     
     override func viewDidLoad() {
         configurator.configure(with: self)
@@ -41,9 +39,6 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol {
         passwordTextField.setPaddingWithImage(imageName: "passwordIcon")
         setBorder(for: passwordTextField)
         setShadow(for: passwordTextField)
-        
-        signInLabel.textColor = COLORS_PALETTE.last
-        registrationLabel.textColor = COLORS_PALETTE.first
     }
     
     func setShadow(for view:UIView) {

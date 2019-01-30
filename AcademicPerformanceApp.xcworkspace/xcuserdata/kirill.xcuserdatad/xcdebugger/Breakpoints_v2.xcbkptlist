@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-modules/Registration/RegistrationView/RegistrationViewController.swift"
-            timestampString = "570098829.012269"
+            timestampString = "570122727.208599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "performRegistration(username:email:password:)"
             landmarkType = "7">
          </BreakpointContent>

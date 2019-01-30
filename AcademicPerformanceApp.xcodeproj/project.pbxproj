@@ -24,6 +24,7 @@
 		ED9ED45921F9E74C00761C09 /* RegistrationRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45821F9E74C00761C09 /* RegistrationRouterProtocol.swift */; };
 		ED9ED45B21F9E75600761C09 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45A21F9E75600761C09 /* RegistrationRouter.swift */; };
 		ED9ED45D21F9E76500761C09 /* RegistrationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45C21F9E76500761C09 /* RegistrationViewProtocol.swift */; };
+		EDA550F221FB522D0008B9DC /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA550F121FB522D0008B9DC /* ForgetPasswordViewController.swift */; };
 		EDD7392321F6FEC600CAC9FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7392221F6FEC600CAC9FD /* User.swift */; };
 		EDD7392521F7297E00CAC9FD /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7392421F7297E00CAC9FD /* ServerService.swift */; };
 		EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB47821F0A71000330EE1 /* AppDelegate.swift */; };
@@ -34,6 +35,15 @@
 		EDDEB48621F0A71100330EE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDDEB48421F0A71100330EE1 /* LaunchScreen.storyboard */; };
 		EDDEB49121F0A71100330EE1 /* AcademicPerformanceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB49021F0A71100330EE1 /* AcademicPerformanceAppTests.swift */; };
 		EDDEB49C21F0A71100330EE1 /* AcademicPerformanceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB49B21F0A71100330EE1 /* AcademicPerformanceAppUITests.swift */; };
+		EDF0028421FF7F7E00FC5E6D /* ForgetPasswordConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF0028321FF7F7E00FC5E6D /* ForgetPasswordConfiguratorProtocol.swift */; };
+		EDF0028621FF7F8B00FC5E6D /* ForgetPasswordConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF0028521FF7F8B00FC5E6D /* ForgetPasswordConfigurator.swift */; };
+		EDF0028821FF7F9900FC5E6D /* ForgetPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF0028721FF7F9900FC5E6D /* ForgetPasswordInteractor.swift */; };
+		EDF0028A21FF7FA800FC5E6D /* ForgetPasswordInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF0028921FF7FA800FC5E6D /* ForgetPasswordInteractorProtocol.swift */; };
+		EDF0028C21FF7FB600FC5E6D /* ForgetPasswordPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF0028B21FF7FB600FC5E6D /* ForgetPasswordPresenterProtocol.swift */; };
+		EDF0028E21FF7FC400FC5E6D /* ForgetPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF0028D21FF7FC400FC5E6D /* ForgetPasswordPresenter.swift */; };
+		EDF0029021FF7FD200FC5E6D /* ForgetPasswordRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF0028F21FF7FD200FC5E6D /* ForgetPasswordRouterProtocol.swift */; };
+		EDF0029221FF7FE100FC5E6D /* ForgetPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF0029121FF7FE100FC5E6D /* ForgetPasswordRouter.swift */; };
+		EDF0029421FF802300FC5E6D /* ForgetPasswordViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF0029321FF802300FC5E6D /* ForgetPasswordViewProtocol.swift */; };
 		EDF66BAA21F4703700A4974A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF66BA921F4703700A4974A /* AppConstants.swift */; };
 		EDF66BAD21F487DB00A4974A /* ExtensionUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF66BAC21F487DB00A4974A /* ExtensionUITextField.swift */; };
 		EDF66BAF21F4ABE400A4974A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF66BAE21F4ABE400A4974A /* RegistrationViewController.swift */; };
@@ -89,6 +99,7 @@
 		ED9ED45821F9E74C00761C09 /* RegistrationRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouterProtocol.swift; sourceTree = "<group>"; };
 		ED9ED45A21F9E75600761C09 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
 		ED9ED45C21F9E76500761C09 /* RegistrationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewProtocol.swift; sourceTree = "<group>"; };
+		EDA550F121FB522D0008B9DC /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		EDD7392221F6FEC600CAC9FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EDD7392421F7297E00CAC9FD /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
 		EDDEB47521F0A71000330EE1 /* AcademicPerformanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademicPerformanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +116,15 @@
 		EDDEB49721F0A71100330EE1 /* AcademicPerformanceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcademicPerformanceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDDEB49B21F0A71100330EE1 /* AcademicPerformanceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademicPerformanceAppUITests.swift; sourceTree = "<group>"; };
 		EDDEB49D21F0A71100330EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDF0028321FF7F7E00FC5E6D /* ForgetPasswordConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordConfiguratorProtocol.swift; sourceTree = "<group>"; };
+		EDF0028521FF7F8B00FC5E6D /* ForgetPasswordConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordConfigurator.swift; sourceTree = "<group>"; };
+		EDF0028721FF7F9900FC5E6D /* ForgetPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordInteractor.swift; sourceTree = "<group>"; };
+		EDF0028921FF7FA800FC5E6D /* ForgetPasswordInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordInteractorProtocol.swift; sourceTree = "<group>"; };
+		EDF0028B21FF7FB600FC5E6D /* ForgetPasswordPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordPresenterProtocol.swift; sourceTree = "<group>"; };
+		EDF0028D21FF7FC400FC5E6D /* ForgetPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordPresenter.swift; sourceTree = "<group>"; };
+		EDF0028F21FF7FD200FC5E6D /* ForgetPasswordRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordRouterProtocol.swift; sourceTree = "<group>"; };
+		EDF0029121FF7FE100FC5E6D /* ForgetPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordRouter.swift; sourceTree = "<group>"; };
+		EDF0029321FF802300FC5E6D /* ForgetPasswordViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewProtocol.swift; sourceTree = "<group>"; };
 		EDF66BA921F4703700A4974A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		EDF66BAC21F487DB00A4974A /* ExtensionUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUITextField.swift; sourceTree = "<group>"; };
 		EDF66BAE21F4ABE400A4974A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +188,53 @@
 				21F2468B42BB88B028C9898B /* Pods-AcademicPerformanceAppUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED26AAAA22008C87003F1381 /* LoginRegisterSwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				ED26AAAF22008CFA003F1381 /* LoginRegisterSwitcherView */,
+				ED26AAAE22008CEA003F1381 /* LoginRegisterSwitcherRouter */,
+				ED26AAAD22008CDF003F1381 /* LoginRegisterSwitcherPresenter */,
+				ED26AAAC22008CBD003F1381 /* LoginRegisterSwitcherInteractor */,
+				ED26AAAB22008CB1003F1381 /* LoginRegisterSwitcherConfigurator */,
+			);
+			path = LoginRegisterSwitcher;
+			sourceTree = "<group>";
+		};
+		ED26AAAB22008CB1003F1381 /* LoginRegisterSwitcherConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginRegisterSwitcherConfigurator;
+			sourceTree = "<group>";
+		};
+		ED26AAAC22008CBD003F1381 /* LoginRegisterSwitcherInteractor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginRegisterSwitcherInteractor;
+			sourceTree = "<group>";
+		};
+		ED26AAAD22008CDF003F1381 /* LoginRegisterSwitcherPresenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginRegisterSwitcherPresenter;
+			sourceTree = "<group>";
+		};
+		ED26AAAE22008CEA003F1381 /* LoginRegisterSwitcherRouter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginRegisterSwitcherRouter;
+			sourceTree = "<group>";
+		};
+		ED26AAAF22008CFA003F1381 /* LoginRegisterSwitcherView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginRegisterSwitcherView;
 			sourceTree = "<group>";
 		};
 		ED9ED44521F9E5FB00761C09 /* Registration */ = {
@@ -235,6 +302,27 @@
 			path = RegistrationRouter;
 			sourceTree = "<group>";
 		};
+		EDA550EF21FB4ECF0008B9DC /* ForgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				EDF0027F21FF7F1000FC5E6D /* ForgetPasswordConfigurator */,
+				EDF0028021FF7F2D00FC5E6D /* ForgetPasswordInteractor */,
+				EDF0028121FF7F3C00FC5E6D /* ForgetPasswordPresenter */,
+				EDF0028221FF7F4B00FC5E6D /* ForgetPasswordRouter */,
+				EDA550F021FB4EE10008B9DC /* ForgetPasswordView */,
+			);
+			path = ForgetPassword;
+			sourceTree = "<group>";
+		};
+		EDA550F021FB4EE10008B9DC /* ForgetPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				EDA550F121FB522D0008B9DC /* ForgetPasswordViewController.swift */,
+				EDF0029321FF802300FC5E6D /* ForgetPasswordViewProtocol.swift */,
+			);
+			path = ForgetPasswordView;
+			sourceTree = "<group>";
+		};
 		EDDEB46C21F0A71000330EE1 = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +377,42 @@
 				EDDEB49D21F0A71100330EE1 /* Info.plist */,
 			);
 			path = AcademicPerformanceAppUITests;
+			sourceTree = "<group>";
+		};
+		EDF0027F21FF7F1000FC5E6D /* ForgetPasswordConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				EDF0028321FF7F7E00FC5E6D /* ForgetPasswordConfiguratorProtocol.swift */,
+				EDF0028521FF7F8B00FC5E6D /* ForgetPasswordConfigurator.swift */,
+			);
+			path = ForgetPasswordConfigurator;
+			sourceTree = "<group>";
+		};
+		EDF0028021FF7F2D00FC5E6D /* ForgetPasswordInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				EDF0028721FF7F9900FC5E6D /* ForgetPasswordInteractor.swift */,
+				EDF0028921FF7FA800FC5E6D /* ForgetPasswordInteractorProtocol.swift */,
+			);
+			path = ForgetPasswordInteractor;
+			sourceTree = "<group>";
+		};
+		EDF0028121FF7F3C00FC5E6D /* ForgetPasswordPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				EDF0028B21FF7FB600FC5E6D /* ForgetPasswordPresenterProtocol.swift */,
+				EDF0028D21FF7FC400FC5E6D /* ForgetPasswordPresenter.swift */,
+			);
+			path = ForgetPasswordPresenter;
+			sourceTree = "<group>";
+		};
+		EDF0028221FF7F4B00FC5E6D /* ForgetPasswordRouter */ = {
+			isa = PBXGroup;
+			children = (
+				EDF0028F21FF7FD200FC5E6D /* ForgetPasswordRouterProtocol.swift */,
+				EDF0029121FF7FE100FC5E6D /* ForgetPasswordRouter.swift */,
+			);
+			path = ForgetPasswordRouter;
 			sourceTree = "<group>";
 		};
 		EDF66BAB21F4878F00A4974A /* ui-utils */ = {
@@ -379,6 +503,8 @@
 		EDF9B17D21F30DDB00599888 /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
+				ED26AAAA22008C87003F1381 /* LoginRegisterSwitcher */,
+				EDA550EF21FB4ECF0008B9DC /* ForgetPassword */,
 				ED9ED44521F9E5FB00761C09 /* Registration */,
 				EDF66BB221F4CEED00A4974A /* Login */,
 			);
@@ -649,17 +775,23 @@
 				EDF66BBE21F4D62A00A4974A /* LoginViewProtocol.swift in Sources */,
 				ED819BC521F60F5E007956F3 /* ErrorsExtension.swift in Sources */,
 				EDD7392521F7297E00CAC9FD /* ServerService.swift in Sources */,
+				EDF0028421FF7F7E00FC5E6D /* ForgetPasswordConfiguratorProtocol.swift in Sources */,
 				ED9ED44D21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift in Sources */,
 				ED819BC721F61A9A007956F3 /* ValidationService.swift in Sources */,
 				EDF66BBA21F4D5B000A4974A /* LoginConfiguratorProtocol.swift in Sources */,
 				EDF66BC821F4D6ED00A4974A /* LoginPresenter.swift in Sources */,
+				EDF0028C21FF7FB600FC5E6D /* ForgetPasswordPresenterProtocol.swift in Sources */,
 				ED9ED44F21F9E6F700761C09 /* RegistrationConfigurator.swift in Sources */,
 				ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */,
 				EDDEB48121F0A71000330EE1 /* AcademicPerformanceApp.xcdatamodeld in Sources */,
+				EDF0029421FF802300FC5E6D /* ForgetPasswordViewProtocol.swift in Sources */,
 				EDDEB47B21F0A71000330EE1 /* ViewController.swift in Sources */,
 				EDD7392321F6FEC600CAC9FD /* User.swift in Sources */,
+				EDF0028821FF7F9900FC5E6D /* ForgetPasswordInteractor.swift in Sources */,
 				ED9ED45521F9E72D00761C09 /* RegistrationPresenterProtocol.swift in Sources */,
+				EDF0029221FF7FE100FC5E6D /* ForgetPasswordRouter.swift in Sources */,
 				ED6FF5C921F6506500E717D9 /* AuthService.swift in Sources */,
+				EDA550F221FB522D0008B9DC /* ForgetPasswordViewController.swift in Sources */,
 				EDF66BCC21F4D71800A4974A /* LoginRouter.swift in Sources */,
 				EDF66BAD21F487DB00A4974A /* ExtensionUITextField.swift in Sources */,
 				EDF66BAF21F4ABE400A4974A /* RegistrationViewController.swift in Sources */,
@@ -667,6 +799,8 @@
 				ED9ED45321F9E71F00761C09 /* RegistrationInteractor.swift in Sources */,
 				ED9ED45D21F9E76500761C09 /* RegistrationViewProtocol.swift in Sources */,
 				EDF66BBC21F4D5C900A4974A /* LoginConfigurator.swift in Sources */,
+				EDF0029021FF7FD200FC5E6D /* ForgetPasswordRouterProtocol.swift in Sources */,
+				EDF0028A21FF7FA800FC5E6D /* ForgetPasswordInteractorProtocol.swift in Sources */,
 				ED9ED45121F9E71100761C09 /* RegistrationInteractorProtocol.swift in Sources */,
 				ED9ED45721F9E73B00761C09 /* RegistrationPresenter.swift in Sources */,
 				EDF66BC421F4D6BD00A4974A /* LoginInteractor.swift in Sources */,
@@ -676,6 +810,8 @@
 				ED9ED45921F9E74C00761C09 /* RegistrationRouterProtocol.swift in Sources */,
 				EDF66BAA21F4703700A4974A /* AppConstants.swift in Sources */,
 				ED1A414621F9BF760005A877 /* ExtensionUIColor.swift in Sources */,
+				EDF0028621FF7F8B00FC5E6D /* ForgetPasswordConfigurator.swift in Sources */,
+				EDF0028E21FF7FC400FC5E6D /* ForgetPasswordPresenter.swift in Sources */,
 				ED9ED45B21F9E75600761C09 /* RegistrationRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

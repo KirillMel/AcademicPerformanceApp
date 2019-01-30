@@ -20,26 +20,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl2-Ru-TOL" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="215"/>
-                                <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9b-2Y-OGh">
-                                        <rect key="frame" x="220.5" y="155" width="132" height="40"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                                        <color key="textColor" red="0.51545363280000001" green="0.57296582780000005" blue="0.59440434639999995" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJL-aa-FBy">
-                                        <rect key="frame" x="23" y="129" width="100.5" height="56"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
-                                        <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="X9b-2Y-OGh" secondAttribute="trailing" constant="22.5" id="1jh-Ky-CkV"/>
-                                    <constraint firstItem="JJL-aa-FBy" firstAttribute="leading" secondItem="Yl2-Ru-TOL" secondAttribute="leading" constant="23" id="DGK-Uf-lux"/>
-                                    <constraint firstAttribute="bottom" secondItem="X9b-2Y-OGh" secondAttribute="bottom" constant="20" id="HeH-4z-yx2"/>
-                                    <constraint firstAttribute="bottom" secondItem="JJL-aa-FBy" secondAttribute="bottom" constant="30" id="RiR-5u-hBh"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-6A-KwF" userLabel="FormView">
                                 <rect key="frame" x="0.0" y="235" width="375" height="222.5"/>
@@ -127,8 +107,6 @@
                         <outlet property="emailTextField" destination="a2W-3r-iy8" id="agP-kD-qef"/>
                         <outlet property="passwordTextField" destination="ZWi-G7-5ec" id="0pH-vb-nts"/>
                         <outlet property="registerButton" destination="g7t-mS-Hq3" id="wqx-pH-ftX"/>
-                        <outlet property="registrationLabel" destination="X9b-2Y-OGh" id="tvo-6O-CkM"/>
-                        <outlet property="signInLabel" destination="JJL-aa-FBy" id="Tn6-uN-4RV"/>
                         <outlet property="usernameTextField" destination="Hsr-B8-lwt" id="Q9G-04-gfQ"/>
                     </connections>
                 </viewController>
@@ -144,29 +122,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gG-Jb-fEk" userLabel="TopView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="215"/>
-                                <subviews>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Stp-tO-gsY">
-                                        <rect key="frame" x="220.5" y="155" width="132" height="40"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                                        <color key="textColor" red="0.51545363275618772" green="0.57296582781408834" blue="0.59440434644670037" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5Y-dN-bvw">
-                                        <rect key="frame" x="23" y="129" width="100.5" height="56"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
-                                        <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Stp-tO-gsY" secondAttribute="bottom" constant="20" id="1sv-pc-RRr"/>
-                                    <constraint firstAttribute="trailing" secondItem="Stp-tO-gsY" secondAttribute="trailing" constant="22.5" id="2yV-9a-7hR"/>
-                                    <constraint firstItem="N5Y-dN-bvw" firstAttribute="leading" secondItem="0gG-Jb-fEk" secondAttribute="leading" constant="23" id="MqG-aC-sE6"/>
-                                    <constraint firstAttribute="bottom" secondItem="N5Y-dN-bvw" secondAttribute="bottom" constant="30" id="Wwh-Si-ffL"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9j-rl-7bs" userLabel="FormView">
                                 <rect key="frame" x="0.0" y="235" width="375" height="222.5"/>
                                 <subviews>
@@ -224,11 +179,20 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forget a password? Click here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wo-wH-aEf">
                                 <rect key="frame" x="16" y="626.5" width="343" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.27987938559999997" blue="0.43473670599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gG-Jb-fEk" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="215"/>
+                                <gestureRecognizers/>
+                            </view>
                         </subviews>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="hH1-fu-YfY" firstAttribute="trailing" secondItem="3Wo-wH-aEf" secondAttribute="trailing" constant="16" id="32A-n4-KeE"/>
                             <constraint firstItem="0gG-Jb-fEk" firstAttribute="top" secondItem="hH1-fu-YfY" secondAttribute="top" id="EYk-fc-VnD"/>
@@ -247,16 +211,43 @@
                         <viewLayoutGuide key="safeArea" id="hH1-fu-YfY"/>
                     </view>
                     <connections>
+                        <outlet property="forgetPasswordLabel" destination="3Wo-wH-aEf" id="9d9-Gv-bIq"/>
                         <outlet property="loginButton" destination="ahu-PJ-zVD" id="0Hp-TB-Rsh"/>
                         <outlet property="loginTextField" destination="F25-fZ-bpa" id="CoD-9z-IKc"/>
                         <outlet property="passwordTextField" destination="pGc-2U-Btw" id="iga-hk-WDG"/>
-                        <outlet property="registrationLabel" destination="Stp-tO-gsY" id="mOD-he-AT8"/>
-                        <outlet property="signInLabel" destination="N5Y-dN-bvw" id="hs3-2u-mX5"/>
+                        <segue destination="wX3-Ws-XU8" kind="presentation" identifier="segueToForgetPasswordView" modalPresentationStyle="overCurrentContext" id="9Hf-pz-kqR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6O-O4-HKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1760.8" y="-530.28485757121439"/>
+        </scene>
+        <!--Forget Password View Controller-->
+        <scene sceneID="XbS-xs-CMf">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="wX3-Ws-XU8" customClass="ForgetPasswordViewController" customModule="AcademicPerformanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="dRY-Nt-LNe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5SM-Wb-fo9">
+                                <rect key="frame" x="153" y="285" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="wX3-Ws-XU8" eventType="touchUpInside" id="s8u-6E-fti"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="UqW-lj-sLZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCw-4c-fPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2624.8000000000002" y="-531.18440779610194"/>
         </scene>
         <!--Login Register Switcher View Controller-->
         <scene sceneID="jdv-TC-bQX">
