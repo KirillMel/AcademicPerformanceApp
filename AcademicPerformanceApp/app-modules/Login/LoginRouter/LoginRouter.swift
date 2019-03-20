@@ -10,16 +10,22 @@ import Foundation
 
 class LoginRouter: LoginRouterProtocol {
     
-    weak var viewController: LoginViewProtocol!
+    weak var viewController: ViperModuleTransitionHandler!
     
-    init(viewController: LoginViewProtocol) {
+    init(viewController: ViperModuleTransitionHandler) {
         self.viewController = viewController
     }
     
     //MARK: - Protocol's implementation
     
-    func moveToForgotPasswordPage() {
-        
+    func moveToForgotPasswordPage(del: OutsideNotifierProtocol) {
+        viewController.openModule(segueIdentifier: "segueToForgetPasswordView"){input in
+            guard let input = input as? ForgetPasswordModuleInput else {
+                return
+            }
+            input.configure(with: del)
+            return
+        }
     }
     
     func moveInsideApp() {

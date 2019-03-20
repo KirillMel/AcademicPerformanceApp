@@ -12,7 +12,9 @@ protocol ForgetPasswordPresenterProtocol: class {
     var router: ForgetPasswordRouterProtocol! { get set }
     var interactor: ForgetPasswordInteractorProtocol! { get set }
     
-    func configureView()
+    func configureView() -> Void
     
-    func performResetPassword(for email: String?)
+    func performResetPassword(for email: String?) -> Void
+    
+    func closeScene() -> Void
 }

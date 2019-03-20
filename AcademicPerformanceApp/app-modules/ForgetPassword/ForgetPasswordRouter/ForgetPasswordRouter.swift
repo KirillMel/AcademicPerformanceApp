@@ -10,13 +10,13 @@ import Foundation
 
 class ForgetPasswordRouter: ForgetPasswordRouterProtocol {
     
-    weak var viewController: ForgetPasswordViewProtocol!
+    weak var viewController: ViperModuleTransitionHandler!
     
-    required init(viewController: ForgetPasswordViewProtocol) {
+    required init(viewController: ViperModuleTransitionHandler) {
         self.viewController = viewController
     }
     
     func moveToPreviousScene() {
-        
+        viewController.closeModule()
     }
 }

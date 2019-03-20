@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ForgetPasswordViewController: UIViewController, ForgetPasswordViewProtocol {
+class ForgetPasswordViewController: UIViewController, ForgetPasswordViewProtocol, ViperModuleTransitionHandler {
     var someShit: UIViewController?
     
     var presenter: ForgetPasswordPresenterProtocol?
@@ -16,13 +16,14 @@ class ForgetPasswordViewController: UIViewController, ForgetPasswordViewProtocol
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    func CreateModule(){
         configurator.configure(with: self)
     }
     
     @IBAction func goBack(_ sender: Any) {
-        someShit?.viewWillAppear(true)
-        self.dismiss(animated: true, completion: nil)
+        presenter?.closeScene()
     }
     
     func configureView() {

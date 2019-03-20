@@ -10,6 +10,7 @@
 		C1683044F177049007316317 /* Pods_AcademicPerformanceAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB03C5A43B50C237A60318F /* Pods_AcademicPerformanceAppTests.framework */; };
 		D6E0C654D21FEDFD43E88694 /* Pods_AcademicPerformanceAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB603E1CEB47EE1F207DA81 /* Pods_AcademicPerformanceAppUITests.framework */; };
 		DF5BF0CE684B54605CB7D656 /* Pods_AcademicPerformanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4B18EF17644DB097F0FB7B /* Pods_AcademicPerformanceApp.framework */; };
+		ED0EE7E8220475F500E4726B /* ViperModuleTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EE7E7220475F500E4726B /* ViperModuleTransitionHandler.swift */; };
 		ED1A414621F9BF760005A877 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A414521F9BF760005A877 /* ExtensionUIColor.swift */; };
 		ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED499B1821F21C7F00AF32FD /* LoginViewController.swift */; };
 		ED6FF5C921F6506500E717D9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6FF5C821F6506500E717D9 /* AuthService.swift */; };
@@ -85,6 +86,7 @@
 		96D511D7E0EF8A3F51769B3E /* Pods-AcademicPerformanceAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademicPerformanceAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AcademicPerformanceAppTests/Pods-AcademicPerformanceAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FB603E1CEB47EE1F207DA81 /* Pods_AcademicPerformanceAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcademicPerformanceAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8790EEB7C012EEFD7576C8C /* Pods-AcademicPerformanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademicPerformanceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcademicPerformanceApp/Pods-AcademicPerformanceApp.debug.xcconfig"; sourceTree = "<group>"; };
+		ED0EE7E7220475F500E4726B /* ViperModuleTransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperModuleTransitionHandler.swift; sourceTree = "<group>"; };
 		ED1A414521F9BF760005A877 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		ED499B1821F21C7F00AF32FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED6FF5C821F6506500E717D9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		ED26AAAF22008CFA003F1381 /* LoginRegisterSwitcherView */ = {
 			isa = PBXGroup;
 			children = (
+				EDDEB47A21F0A71000330EE1 /* ViewController.swift */,
 			);
 			path = LoginRegisterSwitcherView;
 			sourceTree = "<group>";
@@ -356,7 +359,6 @@
 				EDDEB48221F0A71100330EE1 /* Assets.xcassets */,
 				EDF9B17F21F30E1000599888 /* common-utils */,
 				EDDEB48721F0A71100330EE1 /* Info.plist */,
-				EDDEB47A21F0A71000330EE1 /* ViewController.swift */,
 			);
 			path = AcademicPerformanceApp;
 			sourceTree = "<group>";
@@ -420,6 +422,7 @@
 			children = (
 				EDF66BAC21F487DB00A4974A /* ExtensionUITextField.swift */,
 				ED1A414521F9BF760005A877 /* ExtensionUIColor.swift */,
+				ED0EE7E7220475F500E4726B /* ViperModuleTransitionHandler.swift */,
 			);
 			path = "ui-utils";
 			sourceTree = "<group>";
@@ -782,6 +785,7 @@
 				EDF66BC821F4D6ED00A4974A /* LoginPresenter.swift in Sources */,
 				EDF0028C21FF7FB600FC5E6D /* ForgetPasswordPresenterProtocol.swift in Sources */,
 				ED9ED44F21F9E6F700761C09 /* RegistrationConfigurator.swift in Sources */,
+				ED0EE7E8220475F500E4726B /* ViperModuleTransitionHandler.swift in Sources */,
 				ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */,
 				EDDEB48121F0A71000330EE1 /* AcademicPerformanceApp.xcdatamodeld in Sources */,
 				EDF0029421FF802300FC5E6D /* ForgetPasswordViewProtocol.swift in Sources */,

@@ -18,7 +18,7 @@ class LoginPresenter: LoginPresenterProtocol {
     }
     
     func configureView() {
-        
+        viewController.configureView(with: "")
     }
     
     func performLogin(username: String?, password: String?) {
@@ -31,5 +31,18 @@ class LoginPresenter: LoginPresenterProtocol {
     
     func loginDidFail(with error: Error) {
         viewController.showError(error: error.localizedDescription)
+    }
+    
+    func moveToFP() {
+        router.moveToForgotPasswordPage(del: self as OutsideNotifierProtocol)
+    }
+}
+
+extension LoginPresenter: OutsideNotifierProtocol{
+    func notifyAboutAppearing() {
+        self.configureView()
+    }
+    
+    func notifyAboutDisapearing() {
     }
 }

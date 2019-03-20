@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, LoginViewProtocol {
+class LoginViewController: UIViewController, LoginViewProtocol, ViperModuleTransitionHandler {
     var presenter: LoginPresenterProtocol!
     let configurator: LoginConfiguratorProtocol = LoginConfigurator()
     
@@ -65,7 +65,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     }
     
     @objc func forgetPasswordClicked(_ sender: Any) {
-        self.performSegue(withIdentifier: "segueToForgetPasswordView", sender: parentController)
+        presenter.moveToFP()
         UIView.animate(withDuration: 0.15, delay: 0.1, options: .curveEaseOut,
                        animations: {
                         self.loginButton.alpha = 0
@@ -86,14 +86,18 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "segueToForgetPasswordView") {
-            (segue.destination as! ForgetPasswordViewController).someShit = parentController
-        }
+        let configurationHolder = segue.destination as? ForgetPasswordViewController
+        configurationHolder!.CreateModule()
+        (sender as! SegueInfo).configurationBlock!(configurationHolder?.presenter)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        UIView.animate(withDuration: 0.15, delay: 0.1, options: .curveLinear,
+    //MARK: - Implementation of LoginViewProtocol
+    func configureView(with username: String){
+        //loginTextField.text = username
+        
+        if (!loginTextField.isHidden) { return }
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut,
                        animations: {
                         self.loginButton.alpha = 1
                         self.loginTextField.alpha = 1
@@ -105,11 +109,8 @@ class LoginViewController: UIViewController, LoginViewProtocol {
                         self.passwordTextField.isHidden = false
                         self.forgetPasswordLabel.isHidden = false
         })
-    }
-    
-    //MARK: - Implementation of LoginViewProtocol
-    func configureView(with username: String){
-        loginTextField.text = username
+        
+        parentController?.viewWillAppear(true)
     }
     
     func performLogin(username: String?, password: String?) {

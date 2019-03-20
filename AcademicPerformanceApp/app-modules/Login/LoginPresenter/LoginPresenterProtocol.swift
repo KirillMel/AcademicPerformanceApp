@@ -18,4 +18,11 @@ protocol LoginPresenterProtocol: class {
     func loginDidComplete() -> Void
     
     func loginDidFail(with error: Error) -> Void
+    
+    func moveToFP() -> Void
+}
+
+protocol OutsideNotifierProtocol: class {
+    func notifyAboutAppearing() -> Void
+    func notifyAboutDisapearing() -> Void
 }

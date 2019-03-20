@@ -9,6 +9,6 @@
 import Foundation
 
 protocol LoginRouterProtocol: class {
-    func moveToForgotPasswordPage() -> Void
+    func moveToForgotPasswordPage(del: OutsideNotifierProtocol) -> Void
     func moveInsideApp() -> Void
 }

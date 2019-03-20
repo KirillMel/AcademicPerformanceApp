@@ -12,6 +12,7 @@ class ForgetPasswordPresenter: ForgetPasswordPresenterProtocol {
     var router: ForgetPasswordRouterProtocol!
     var interactor: ForgetPasswordInteractorProtocol!
     weak var viewController: ForgetPasswordViewProtocol!
+    weak var delegate: OutsideNotifierProtocol?
     
     required init(viewController: ForgetPasswordViewProtocol) {
         self.viewController = viewController
@@ -24,4 +25,20 @@ class ForgetPasswordPresenter: ForgetPasswordPresenterProtocol {
     func performResetPassword(for email: String?) {
         
     }
+    
+    func closeScene() {
+        delegate?.notifyAboutAppearing()
+        router.moveToPreviousScene()
+    }
+}
+
+extension ForgetPasswordPresenter: ForgetPasswordModuleInput{
+    func configure(with delegate: OutsideNotifierProtocol) {
+        self.delegate = delegate
+        print("CONFIGURATED")
+    }
+}
+
+protocol ForgetPasswordModuleInput: class {
+    func configure(with delegate: OutsideNotifierProtocol) -> Void
 }
