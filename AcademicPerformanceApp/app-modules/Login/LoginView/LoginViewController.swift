@@ -82,13 +82,14 @@ class LoginViewController: UIViewController, LoginViewProtocol, ViperModuleTrans
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
-        performLogin(username: loginTextField.text, password: passwordTextField.text)
+        //performLogin(username: loginTextField.text, password: passwordTextField.text)
+        performSegue(withIdentifier: "insideAppSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let configurationHolder = segue.destination as? ForgetPasswordViewController
-        configurationHolder!.CreateModule()
-        (sender as! SegueInfo).configurationBlock!(configurationHolder?.presenter)
+        configurationHolder?.CreateModule()
+        (sender as? SegueInfo)?.configurationBlock?(configurationHolder?.presenter)
     }
     
     //MARK: - Implementation of LoginViewProtocol

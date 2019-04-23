@@ -16,6 +16,7 @@
 		ED6FF5C921F6506500E717D9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6FF5C821F6506500E717D9 /* AuthService.swift */; };
 		ED819BC521F60F5E007956F3 /* ErrorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED819BC421F60F5E007956F3 /* ErrorsExtension.swift */; };
 		ED819BC721F61A9A007956F3 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED819BC621F61A9A007956F3 /* ValidationService.swift */; };
+		ED98A144224274E9003FACA8 /* TabsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED98A143224274E9003FACA8 /* TabsScreen.storyboard */; };
 		ED9ED44D21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED44C21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift */; };
 		ED9ED44F21F9E6F700761C09 /* RegistrationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED44E21F9E6F700761C09 /* RegistrationConfigurator.swift */; };
 		ED9ED45121F9E71100761C09 /* RegistrationInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45021F9E71100761C09 /* RegistrationInteractorProtocol.swift */; };
@@ -92,6 +93,7 @@
 		ED6FF5C821F6506500E717D9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		ED819BC421F60F5E007956F3 /* ErrorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsExtension.swift; sourceTree = "<group>"; };
 		ED819BC621F61A9A007956F3 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
+		ED98A143224274E9003FACA8 /* TabsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabsScreen.storyboard; sourceTree = "<group>"; };
 		ED9ED44C21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationConfiguratorProtocol.swift; sourceTree = "<group>"; };
 		ED9ED44E21F9E6F700761C09 /* RegistrationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationConfigurator.swift; sourceTree = "<group>"; };
 		ED9ED45021F9E71100761C09 /* RegistrationInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 			children = (
 				EDDEB47C21F0A71000330EE1 /* Main.storyboard */,
 				EDDEB48421F0A71100330EE1 /* LaunchScreen.storyboard */,
+				ED98A143224274E9003FACA8 /* TabsScreen.storyboard */,
 			);
 			path = "app-ui";
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 			files = (
 				EDDEB48621F0A71100330EE1 /* LaunchScreen.storyboard in Resources */,
 				EDDEB48321F0A71100330EE1 /* Assets.xcassets in Resources */,
+				ED98A144224274E9003FACA8 /* TabsScreen.storyboard in Resources */,
 				EDDEB47E21F0A71000330EE1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

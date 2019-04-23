@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aqO-a6-qJo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Subjects-->
+        <scene sceneID="fpl-fZ-I0e">
+            <objects>
+                <viewController id="JnZ-IF-HKa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gUR-Fm-Ze1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="b37-e1-mQH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Subjects" image="subjects" id="nWn-go-L3L"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JC0-BF-0iV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153" y="271"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="58p-ZJ-bJe">
+            <objects>
+                <viewController id="55x-xU-b4a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ejr-km-FkF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IVB-4O-TWz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="ZJV-94-KL0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QQI-9Z-Coy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="-106"/>
+        </scene>
+        <!--Lecture-->
+        <scene sceneID="xoZ-6T-4iU">
+            <objects>
+                <viewController id="ZLo-R1-XnB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9kh-PY-cjd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3Gs-NA-iqu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lecture" image="live" id="Exp-jg-h4E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IrB-pD-zSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="-437"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ons-p5-X4S">
+            <objects>
+                <tabBarController id="aqO-a6-qJo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ee3-yJ-lcn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.27987938559999997" blue="0.43473670599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZLo-R1-XnB" kind="relationship" relationship="viewControllers" id="8ky-FZ-8kh"/>
+                        <segue destination="JnZ-IF-HKa" kind="relationship" relationship="viewControllers" id="wuD-d6-bZK"/>
+                        <segue destination="55x-xU-b4a" kind="relationship" relationship="viewControllers" id="HBf-Qo-hzZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGT-aX-6xo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-798" y="-105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="live" width="48" height="48"/>
+        <image name="settings" width="75" height="75"/>
+        <image name="subjects" width="37.5" height="37.5"/>
+    </resources>
+</document>

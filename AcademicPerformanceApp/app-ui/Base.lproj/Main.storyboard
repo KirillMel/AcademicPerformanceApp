@@ -114,6 +114,14 @@
             </objects>
             <point key="canvasLocation" x="1760.8" y="243.32833583208398"/>
         </scene>
+        <!--TabsScreen-->
+        <scene sceneID="f0h-9D-MYX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabsScreen" id="Wcb-2g-GbY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mzn-cd-re6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2319" y="-992"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="wGD-Se-hs3">
             <objects>
@@ -216,6 +224,7 @@
                         <outlet property="loginTextField" destination="F25-fZ-bpa" id="CoD-9z-IKc"/>
                         <outlet property="passwordTextField" destination="pGc-2U-Btw" id="iga-hk-WDG"/>
                         <segue destination="wX3-Ws-XU8" kind="presentation" identifier="segueToForgetPasswordView" modalPresentationStyle="overCurrentContext" id="9Hf-pz-kqR"/>
+                        <segue destination="Wcb-2g-GbY" kind="show" identifier="insideAppSegue" id="yZi-XB-WZm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d6O-O4-HKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
