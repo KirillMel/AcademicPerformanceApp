@@ -13,6 +13,9 @@
 		ED0EE7E8220475F500E4726B /* ViperModuleTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EE7E7220475F500E4726B /* ViperModuleTransitionHandler.swift */; };
 		ED1A414621F9BF760005A877 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A414521F9BF760005A877 /* ExtensionUIColor.swift */; };
 		ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED499B1821F21C7F00AF32FD /* LoginViewController.swift */; };
+		ED49B40322705370003AFFE5 /* BubbleCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49B40222705370003AFFE5 /* BubbleCells.swift */; };
+		ED49B4062270670F003AFFE5 /* AnswersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49B4052270670F003AFFE5 /* AnswersListViewController.swift */; };
+		ED49B408227084D4003AFFE5 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49B407227084D4003AFFE5 /* AnswerCell.swift */; };
 		ED6FF5C921F6506500E717D9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6FF5C821F6506500E717D9 /* AuthService.swift */; };
 		ED819BC521F60F5E007956F3 /* ErrorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED819BC421F60F5E007956F3 /* ErrorsExtension.swift */; };
 		ED819BC721F61A9A007956F3 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED819BC621F61A9A007956F3 /* ValidationService.swift */; };
@@ -27,6 +30,7 @@
 		ED9ED45B21F9E75600761C09 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45A21F9E75600761C09 /* RegistrationRouter.swift */; };
 		ED9ED45D21F9E76500761C09 /* RegistrationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45C21F9E76500761C09 /* RegistrationViewProtocol.swift */; };
 		EDA550F221FB522D0008B9DC /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA550F121FB522D0008B9DC /* ForgetPasswordViewController.swift */; };
+		EDBEF68F226F95BC009E7865 /* LiveLectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF68E226F95BC009E7865 /* LiveLectureViewController.swift */; };
 		EDD7392321F6FEC600CAC9FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7392221F6FEC600CAC9FD /* User.swift */; };
 		EDD7392521F7297E00CAC9FD /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7392421F7297E00CAC9FD /* ServerService.swift */; };
 		EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDEB47821F0A71000330EE1 /* AppDelegate.swift */; };
@@ -90,6 +94,9 @@
 		ED0EE7E7220475F500E4726B /* ViperModuleTransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperModuleTransitionHandler.swift; sourceTree = "<group>"; };
 		ED1A414521F9BF760005A877 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		ED499B1821F21C7F00AF32FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ED49B40222705370003AFFE5 /* BubbleCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCells.swift; sourceTree = "<group>"; };
+		ED49B4052270670F003AFFE5 /* AnswersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersListViewController.swift; sourceTree = "<group>"; };
+		ED49B407227084D4003AFFE5 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
 		ED6FF5C821F6506500E717D9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		ED819BC421F60F5E007956F3 /* ErrorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorsExtension.swift; sourceTree = "<group>"; };
 		ED819BC621F61A9A007956F3 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
@@ -104,6 +111,7 @@
 		ED9ED45A21F9E75600761C09 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
 		ED9ED45C21F9E76500761C09 /* RegistrationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewProtocol.swift; sourceTree = "<group>"; };
 		EDA550F121FB522D0008B9DC /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		EDBEF68E226F95BC009E7865 /* LiveLectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLectureViewController.swift; sourceTree = "<group>"; };
 		EDD7392221F6FEC600CAC9FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EDD7392421F7297E00CAC9FD /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
 		EDDEB47521F0A71000330EE1 /* AcademicPerformanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademicPerformanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +250,23 @@
 			path = LoginRegisterSwitcherView;
 			sourceTree = "<group>";
 		};
+		ED49B40122705359003AFFE5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ED49B40222705370003AFFE5 /* BubbleCells.swift */,
+				ED49B407227084D4003AFFE5 /* AnswerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ED49B404227066EE003AFFE5 /* AnswersList */ = {
+			isa = PBXGroup;
+			children = (
+				ED49B4052270670F003AFFE5 /* AnswersListViewController.swift */,
+			);
+			path = AnswersList;
+			sourceTree = "<group>";
+		};
 		ED9ED44521F9E5FB00761C09 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +351,14 @@
 				EDF0029321FF802300FC5E6D /* ForgetPasswordViewProtocol.swift */,
 			);
 			path = ForgetPasswordView;
+			sourceTree = "<group>";
+		};
+		EDBEF68D226F9595009E7865 /* LiveLecture */ = {
+			isa = PBXGroup;
+			children = (
+				EDBEF68E226F95BC009E7865 /* LiveLectureViewController.swift */,
+			);
+			path = LiveLecture;
 			sourceTree = "<group>";
 		};
 		EDDEB46C21F0A71000330EE1 = {
@@ -508,6 +541,8 @@
 		EDF9B17D21F30DDB00599888 /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
+				ED49B404227066EE003AFFE5 /* AnswersList */,
+				EDBEF68D226F9595009E7865 /* LiveLecture */,
 				ED26AAAA22008C87003F1381 /* LoginRegisterSwitcher */,
 				EDA550EF21FB4ECF0008B9DC /* ForgetPassword */,
 				ED9ED44521F9E5FB00761C09 /* Registration */,
@@ -537,6 +572,7 @@
 		EDF9B18021F30E4300599888 /* app-ui */ = {
 			isa = PBXGroup;
 			children = (
+				ED49B40122705359003AFFE5 /* Cells */,
 				EDDEB47C21F0A71000330EE1 /* Main.storyboard */,
 				EDDEB48421F0A71100330EE1 /* LaunchScreen.storyboard */,
 				ED98A143224274E9003FACA8 /* TabsScreen.storyboard */,
@@ -563,7 +599,6 @@
 				EDDEB47121F0A71000330EE1 /* Sources */,
 				EDDEB47221F0A71000330EE1 /* Frameworks */,
 				EDDEB47321F0A71000330EE1 /* Resources */,
-				C4C29586143413F053B2DE84 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -728,28 +763,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C4C29586143413F053B2DE84 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AcademicPerformanceApp/Pods-AcademicPerformanceApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AcademicPerformanceApp/Pods-AcademicPerformanceApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C675CD37BFC86455C53D270E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -782,10 +795,12 @@
 				EDF66BBE21F4D62A00A4974A /* LoginViewProtocol.swift in Sources */,
 				ED819BC521F60F5E007956F3 /* ErrorsExtension.swift in Sources */,
 				EDD7392521F7297E00CAC9FD /* ServerService.swift in Sources */,
+				ED49B408227084D4003AFFE5 /* AnswerCell.swift in Sources */,
 				EDF0028421FF7F7E00FC5E6D /* ForgetPasswordConfiguratorProtocol.swift in Sources */,
 				ED9ED44D21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift in Sources */,
 				ED819BC721F61A9A007956F3 /* ValidationService.swift in Sources */,
 				EDF66BBA21F4D5B000A4974A /* LoginConfiguratorProtocol.swift in Sources */,
+				EDBEF68F226F95BC009E7865 /* LiveLectureViewController.swift in Sources */,
 				EDF66BC821F4D6ED00A4974A /* LoginPresenter.swift in Sources */,
 				EDF0028C21FF7FB600FC5E6D /* ForgetPasswordPresenterProtocol.swift in Sources */,
 				ED9ED44F21F9E6F700761C09 /* RegistrationConfigurator.swift in Sources */,
@@ -806,6 +821,7 @@
 				EDF66BC621F4D6D400A4974A /* LoginPresenterProtocol.swift in Sources */,
 				ED9ED45321F9E71F00761C09 /* RegistrationInteractor.swift in Sources */,
 				ED9ED45D21F9E76500761C09 /* RegistrationViewProtocol.swift in Sources */,
+				ED49B4062270670F003AFFE5 /* AnswersListViewController.swift in Sources */,
 				EDF66BBC21F4D5C900A4974A /* LoginConfigurator.swift in Sources */,
 				EDF0029021FF7FD200FC5E6D /* ForgetPasswordRouterProtocol.swift in Sources */,
 				EDF0028A21FF7FA800FC5E6D /* ForgetPasswordInteractorProtocol.swift in Sources */,
@@ -813,6 +829,7 @@
 				ED9ED45721F9E73B00761C09 /* RegistrationPresenter.swift in Sources */,
 				EDF66BC421F4D6BD00A4974A /* LoginInteractor.swift in Sources */,
 				EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */,
+				ED49B40322705370003AFFE5 /* BubbleCells.swift in Sources */,
 				EDF66BCA21F4D70800A4974A /* LoginRouterProtocol.swift in Sources */,
 				EDF66BC021F4D68D00A4974A /* LoginInteractorProtocol.swift in Sources */,
 				ED9ED45921F9E74C00761C09 /* RegistrationRouterProtocol.swift in Sources */,

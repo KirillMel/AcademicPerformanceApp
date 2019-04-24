@@ -18,5 +18,3 @@ target 'AcademicPerformanceApp' do
   end
 
 end
-
-pod 'SideMenu'

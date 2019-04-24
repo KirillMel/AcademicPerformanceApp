@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-AcademicPerformanceApp/Pods-AcademicPerformanceApp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/MessageInputBar/MessageInputBar.framework
+${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework
