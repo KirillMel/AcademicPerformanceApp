@@ -64,6 +64,7 @@ extension LiveLectureViewController: UITableViewDelegate, UITableViewDataSource 
         let cellToDeSelect: UITableViewCell = tableView.cellForRow(at: indexPath)!
         
         cellToDeSelect.contentView.backgroundColor = .white
+        tableView.deselectRow(at: indexPath, animated: true)
         
         performSegue(withIdentifier: "segueToAnswers", sender: messages[(indexPath.row)])
     }

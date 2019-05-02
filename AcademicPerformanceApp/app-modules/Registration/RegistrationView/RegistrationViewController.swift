@@ -41,19 +41,7 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol {
         setShadow(for: passwordTextField)
     }
     
-    func setShadow(for view:UIView) {
-        view.layer.masksToBounds = false
-        view.layer.shadowRadius = 6.0
-        view.layer.shadowColor = UIColor.gray.cgColor
-        view.layer.shadowOffset = CGSize.init(width: 5.0, height: 5.0)
-        view.layer.shadowOpacity = 1.0
-    }
     
-    func setBorder(for view: UITextField) {
-        view.layer.borderWidth = MAIN_BORDER_WIDTH_FOR_FRAMES
-        view.layer.cornerRadius = MAIN_CORNER_RADIUS
-        view.layer.borderColor = UIColor.lightGray.cgColor
-    }
     
     @IBAction func registerButtonClicked(_ sender: Any) {
         performRegistration(username: usernameTextField.text, email: emailTextField.text, password: passwordTextField.text)
