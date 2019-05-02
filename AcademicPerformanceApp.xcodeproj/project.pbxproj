@@ -10,6 +10,15 @@
 		C1683044F177049007316317 /* Pods_AcademicPerformanceAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB03C5A43B50C237A60318F /* Pods_AcademicPerformanceAppTests.framework */; };
 		D6E0C654D21FEDFD43E88694 /* Pods_AcademicPerformanceAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FB603E1CEB47EE1F207DA81 /* Pods_AcademicPerformanceAppUITests.framework */; };
 		DF5BF0CE684B54605CB7D656 /* Pods_AcademicPerformanceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4B18EF17644DB097F0FB7B /* Pods_AcademicPerformanceApp.framework */; };
+		ED02F5C2227B740800236928 /* LectureListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F5C1227B740800236928 /* LectureListViewProtocol.swift */; };
+		ED02F5C4227B741B00236928 /* LectureListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F5C3227B741B00236928 /* LectureListInteractorProtocol.swift */; };
+		ED02F5C6227B742800236928 /* LectureListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F5C5227B742800236928 /* LectureListInteractor.swift */; };
+		ED02F5C8227B743700236928 /* LectureListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F5C7227B743700236928 /* LectureListPresenterProtocol.swift */; };
+		ED02F5CA227B744100236928 /* LectureListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F5C9227B744100236928 /* LectureListPresenter.swift */; };
+		ED02F5CC227B745100236928 /* LectureListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F5CB227B745100236928 /* LectureListRouterProtocol.swift */; };
+		ED02F5CE227B745E00236928 /* LectureListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F5CD227B745E00236928 /* LectureListRouter.swift */; };
+		ED02F5D0227B747100236928 /* LectureListConfiguratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F5CF227B747100236928 /* LectureListConfiguratorProtocol.swift */; };
+		ED02F5D2227B748200236928 /* LectureListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02F5D1227B748200236928 /* LectureListConfigurator.swift */; };
 		ED0EE7E8220475F500E4726B /* ViperModuleTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EE7E7220475F500E4726B /* ViperModuleTransitionHandler.swift */; };
 		ED1A414621F9BF760005A877 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A414521F9BF760005A877 /* ExtensionUIColor.swift */; };
 		ED1FF5C5227313C900811591 /* tmpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF5C4227313C900811591 /* tmpVC.swift */; };
@@ -108,6 +117,15 @@
 		96D511D7E0EF8A3F51769B3E /* Pods-AcademicPerformanceAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademicPerformanceAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AcademicPerformanceAppTests/Pods-AcademicPerformanceAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9FB603E1CEB47EE1F207DA81 /* Pods_AcademicPerformanceAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcademicPerformanceAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8790EEB7C012EEFD7576C8C /* Pods-AcademicPerformanceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademicPerformanceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcademicPerformanceApp/Pods-AcademicPerformanceApp.debug.xcconfig"; sourceTree = "<group>"; };
+		ED02F5C1227B740800236928 /* LectureListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListViewProtocol.swift; sourceTree = "<group>"; };
+		ED02F5C3227B741B00236928 /* LectureListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListInteractorProtocol.swift; sourceTree = "<group>"; };
+		ED02F5C5227B742800236928 /* LectureListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListInteractor.swift; sourceTree = "<group>"; };
+		ED02F5C7227B743700236928 /* LectureListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListPresenterProtocol.swift; sourceTree = "<group>"; };
+		ED02F5C9227B744100236928 /* LectureListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListPresenter.swift; sourceTree = "<group>"; };
+		ED02F5CB227B745100236928 /* LectureListRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListRouterProtocol.swift; sourceTree = "<group>"; };
+		ED02F5CD227B745E00236928 /* LectureListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListRouter.swift; sourceTree = "<group>"; };
+		ED02F5CF227B747100236928 /* LectureListConfiguratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListConfiguratorProtocol.swift; sourceTree = "<group>"; };
+		ED02F5D1227B748200236928 /* LectureListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListConfigurator.swift; sourceTree = "<group>"; };
 		ED0EE7E7220475F500E4726B /* ViperModuleTransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperModuleTransitionHandler.swift; sourceTree = "<group>"; };
 		ED1A414521F9BF760005A877 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		ED1FF5C4227313C900811591 /* tmpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmpVC.swift; sourceTree = "<group>"; };
@@ -239,6 +257,8 @@
 		ED02F5BB227B72D400236928 /* LectureListView */ = {
 			isa = PBXGroup;
 			children = (
+				EDEDE9CE2271EDCA005A06B8 /* LectureListViewController.swift */,
+				ED02F5C1227B740800236928 /* LectureListViewProtocol.swift */,
 			);
 			path = LectureListView;
 			sourceTree = "<group>";
@@ -246,6 +266,8 @@
 		ED02F5BC227B72E000236928 /* LectureListInteractor */ = {
 			isa = PBXGroup;
 			children = (
+				ED02F5C3227B741B00236928 /* LectureListInteractorProtocol.swift */,
+				ED02F5C5227B742800236928 /* LectureListInteractor.swift */,
 			);
 			path = LectureListInteractor;
 			sourceTree = "<group>";
@@ -253,6 +275,8 @@
 		ED02F5BD227B72F200236928 /* LectureListPresenter */ = {
 			isa = PBXGroup;
 			children = (
+				ED02F5C7227B743700236928 /* LectureListPresenterProtocol.swift */,
+				ED02F5C9227B744100236928 /* LectureListPresenter.swift */,
 			);
 			path = LectureListPresenter;
 			sourceTree = "<group>";
@@ -260,6 +284,8 @@
 		ED02F5BE227B72FE00236928 /* LectureListRouter */ = {
 			isa = PBXGroup;
 			children = (
+				ED02F5CB227B745100236928 /* LectureListRouterProtocol.swift */,
+				ED02F5CD227B745E00236928 /* LectureListRouter.swift */,
 			);
 			path = LectureListRouter;
 			sourceTree = "<group>";
@@ -275,6 +301,8 @@
 		ED02F5C0227B732C00236928 /* LectureListConfigurator */ = {
 			isa = PBXGroup;
 			children = (
+				ED02F5CF227B747100236928 /* LectureListConfiguratorProtocol.swift */,
+				ED02F5D1227B748200236928 /* LectureListConfigurator.swift */,
 			);
 			path = LectureListConfigurator;
 			sourceTree = "<group>";
@@ -569,7 +597,6 @@
 				ED02F5BD227B72F200236928 /* LectureListPresenter */,
 				ED02F5BC227B72E000236928 /* LectureListInteractor */,
 				ED02F5BB227B72D400236928 /* LectureListView */,
-				EDEDE9CE2271EDCA005A06B8 /* LectureListViewController.swift */,
 			);
 			path = LectureList;
 			sourceTree = "<group>";
@@ -969,14 +996,17 @@
 				ED9C09C12277695A00716666 /* Answer.swift in Sources */,
 				ED49B408227084D4003AFFE5 /* AnswerCell.swift in Sources */,
 				EDF0028421FF7F7E00FC5E6D /* ForgetPasswordConfiguratorProtocol.swift in Sources */,
+				ED02F5C4227B741B00236928 /* LectureListInteractorProtocol.swift in Sources */,
 				ED6F69BA2275815D004C1619 /* SubjectListInteractorProtocol.swift in Sources */,
 				ED9ED44D21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift in Sources */,
+				ED02F5CE227B745E00236928 /* LectureListRouter.swift in Sources */,
 				ED819BC721F61A9A007956F3 /* ValidationService.swift in Sources */,
 				ED6F69B622757FD3004C1619 /* SubjectListPresenterProtocol.swift in Sources */,
 				EDF66BBA21F4D5B000A4974A /* LoginConfiguratorProtocol.swift in Sources */,
 				ED9C09BD2277616200716666 /* Subject.swift in Sources */,
 				EDBEF68F226F95BC009E7865 /* LiveLectureViewController.swift in Sources */,
 				EDEDE9CF2271EDCA005A06B8 /* LectureListViewController.swift in Sources */,
+				ED02F5D0227B747100236928 /* LectureListConfiguratorProtocol.swift in Sources */,
 				EDF66BC821F4D6ED00A4974A /* LoginPresenter.swift in Sources */,
 				ED6F69AE22757EAA004C1619 /* SubjectListView.swift in Sources */,
 				ED6F69BC227582DA004C1619 /* SubjectListConfiguratorProtocol.swift in Sources */,
@@ -984,10 +1014,12 @@
 				ED9ED44F21F9E6F700761C09 /* RegistrationConfigurator.swift in Sources */,
 				ED0EE7E8220475F500E4726B /* ViperModuleTransitionHandler.swift in Sources */,
 				ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */,
+				ED02F5C2227B740800236928 /* LectureListViewProtocol.swift in Sources */,
 				EDDEB48121F0A71000330EE1 /* AcademicPerformanceApp.xcdatamodeld in Sources */,
 				EDF0029421FF802300FC5E6D /* ForgetPasswordViewProtocol.swift in Sources */,
 				EDDEB47B21F0A71000330EE1 /* ViewController.swift in Sources */,
 				EDD7392321F6FEC600CAC9FD /* User.swift in Sources */,
+				ED02F5C8227B743700236928 /* LectureListPresenterProtocol.swift in Sources */,
 				EDF0028821FF7F9900FC5E6D /* ForgetPasswordInteractor.swift in Sources */,
 				ED9ED45521F9E72D00761C09 /* RegistrationPresenterProtocol.swift in Sources */,
 				EDF0029221FF7FE100FC5E6D /* ForgetPasswordRouter.swift in Sources */,
@@ -996,10 +1028,12 @@
 				ED6F69B82275814F004C1619 /* SubjectListInteractor.swift in Sources */,
 				EDF66BCC21F4D71800A4974A /* LoginRouter.swift in Sources */,
 				EDF66BAD21F487DB00A4974A /* ExtensionUITextField.swift in Sources */,
+				ED02F5CC227B745100236928 /* LectureListRouterProtocol.swift in Sources */,
 				ED6F69BE227582E5004C1619 /* SubjectListConfigurator.swift in Sources */,
 				EDF66BAF21F4ABE400A4974A /* RegistrationViewController.swift in Sources */,
 				EDF66BC621F4D6D400A4974A /* LoginPresenterProtocol.swift in Sources */,
 				EDEDE9D22271F8F8005A06B8 /* AnswerScreenViewController.swift in Sources */,
+				ED02F5D2227B748200236928 /* LectureListConfigurator.swift in Sources */,
 				ED6F69A72275758C004C1619 /* ExtensionUIViewController.swift in Sources */,
 				ED9ED45321F9E71F00761C09 /* RegistrationInteractor.swift in Sources */,
 				ED9ED45D21F9E76500761C09 /* RegistrationViewProtocol.swift in Sources */,
@@ -1012,6 +1046,7 @@
 				ED6F69B422757FC5004C1619 /* SubjectListPresenter.swift in Sources */,
 				ED9ED45121F9E71100761C09 /* RegistrationInteractorProtocol.swift in Sources */,
 				ED9ED45721F9E73B00761C09 /* RegistrationPresenter.swift in Sources */,
+				ED02F5C6227B742800236928 /* LectureListInteractor.swift in Sources */,
 				EDF66BC421F4D6BD00A4974A /* LoginInteractor.swift in Sources */,
 				ED6F69B022757F5B004C1619 /* SubjectListRouter.swift in Sources */,
 				EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */,
@@ -1020,6 +1055,7 @@
 				EDF66BCA21F4D70800A4974A /* LoginRouterProtocol.swift in Sources */,
 				EDF66BC021F4D68D00A4974A /* LoginInteractorProtocol.swift in Sources */,
 				ED9ED45921F9E74C00761C09 /* RegistrationRouterProtocol.swift in Sources */,
+				ED02F5CA227B744100236928 /* LectureListPresenter.swift in Sources */,
 				EDF66BAA21F4703700A4974A /* AppConstants.swift in Sources */,
 				ED1A414621F9BF760005A877 /* ExtensionUIColor.swift in Sources */,
 				EDF0028621FF7F8B00FC5E6D /* ForgetPasswordConfigurator.swift in Sources */,

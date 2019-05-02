@@ -8,35 +8,38 @@
 
 import UIKit
 
-class LectureListViewController: UIViewController {
-    var lectureList = [Lecture]()
-    let cellIdentifier = "lectureCell"
-    
+class LectureListViewController: UIViewController, LectureListViewProtocol, ViperModuleTransitionHandler {
     @IBOutlet weak var tableView: UITableView!
+    
+    let configurator: LectureListConfiguratorProtocol = LectureListConfigurator()
+    
+    var presenter: LectureListPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let item1 = Lecture(id: 0, subject: 1, description: "Nice lecture", questions: nil)
-        let item2 = Lecture(id: 1, subject: 1, description: "Some fucking shit", questions: nil)
-        
-        lectureList.append(item1)
-        lectureList.append(item2)
-        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        configurator.configure(with: self)
+        
+        presenter.setUpViewWithData()
+    }
+    
+    func reloadData() {
+        tableView.reloadData()
     }
 }
 
 extension LectureListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lectureList.count
+        return presenter.getCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         
-        cell.textLabel?.text = lectureList[indexPath.row].description ?? ""
+        cell.textLabel?.text = presenter.getLecture(byId: indexPath.row)
         
         return cell
     }
