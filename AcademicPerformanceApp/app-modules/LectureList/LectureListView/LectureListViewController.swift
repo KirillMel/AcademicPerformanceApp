@@ -37,7 +37,7 @@ extension LectureListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lectureCell")!
         
         cell.textLabel?.text = presenter.getLecture(byId: indexPath.row)
         

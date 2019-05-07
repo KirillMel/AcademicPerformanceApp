@@ -26,6 +26,7 @@
 		ED49B40322705370003AFFE5 /* BubbleCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49B40222705370003AFFE5 /* BubbleCells.swift */; };
 		ED49B4062270670F003AFFE5 /* AnswersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49B4052270670F003AFFE5 /* AnswersListViewController.swift */; };
 		ED49B408227084D4003AFFE5 /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49B407227084D4003AFFE5 /* AnswerCell.swift */; };
+		ED6E6B5E2281BDAE0095FD4C /* vc.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6E6B5D2281BDAE0095FD4C /* vc.swift */; };
 		ED6F69A72275758C004C1619 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F69A62275758C004C1619 /* ExtensionUIViewController.swift */; };
 		ED6F69AE22757EAA004C1619 /* SubjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F69AD22757EAA004C1619 /* SubjectListView.swift */; };
 		ED6F69B022757F5B004C1619 /* SubjectListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6F69AF22757F5B004C1619 /* SubjectListRouter.swift */; };
@@ -133,6 +134,7 @@
 		ED49B40222705370003AFFE5 /* BubbleCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCells.swift; sourceTree = "<group>"; };
 		ED49B4052270670F003AFFE5 /* AnswersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersListViewController.swift; sourceTree = "<group>"; };
 		ED49B407227084D4003AFFE5 /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		ED6E6B5D2281BDAE0095FD4C /* vc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vc.swift; sourceTree = "<group>"; };
 		ED6F69A62275758C004C1619 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		ED6F69AD22757EAA004C1619 /* SubjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectListView.swift; sourceTree = "<group>"; };
 		ED6F69AF22757F5B004C1619 /* SubjectListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectListRouter.swift; sourceTree = "<group>"; };
@@ -745,6 +747,7 @@
 				ED9ED44521F9E5FB00761C09 /* Registration */,
 				EDF66BB221F4CEED00A4974A /* Login */,
 				ED1FF5C4227313C900811591 /* tmpVC.swift */,
+				ED6E6B5D2281BDAE0095FD4C /* vc.swift */,
 			);
 			path = "app-modules";
 			sourceTree = "<group>";
@@ -996,6 +999,7 @@
 				ED9C09C12277695A00716666 /* Answer.swift in Sources */,
 				ED49B408227084D4003AFFE5 /* AnswerCell.swift in Sources */,
 				EDF0028421FF7F7E00FC5E6D /* ForgetPasswordConfiguratorProtocol.swift in Sources */,
+				ED6E6B5E2281BDAE0095FD4C /* vc.swift in Sources */,
 				ED02F5C4227B741B00236928 /* LectureListInteractorProtocol.swift in Sources */,
 				ED6F69BA2275815D004C1619 /* SubjectListInteractorProtocol.swift in Sources */,
 				ED9ED44D21F9E6E600761C09 /* RegistrationConfiguratorProtocol.swift in Sources */,

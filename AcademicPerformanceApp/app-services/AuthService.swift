@@ -31,7 +31,6 @@ class RemoteAuthService: AuthServiceProtocol {
         group.enter()
         DispatchQueue.global(qos: .default).async {
             self.serverService.connectToAPI(with: self.serverService.prepareURLRequest(with: route, method: RequestMethod.get, body: nil)){ (output)  in
-                //print(String(data: output, encoding: .utf8))
                 self.parseResult(for: output)
                 group.leave()
             }

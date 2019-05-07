@@ -18,11 +18,7 @@ class LoginInteractor: LoginInteractorProtocol {
     }
     
     func performLogin(username: String, password: String) {
-        if (!validationService.validate(for: username)) {
-            presenter.loginDidFail(with: validationService.error!)
-            return
-        }
-        if (!validationService.validate(for: password)) {
+        guard (validationService.validate(for: username)), (validationService.validate(for: password)) else {
             presenter.loginDidFail(with: validationService.error!)
             return
         }
