@@ -53,6 +53,7 @@
 		ED9ED45921F9E74C00761C09 /* RegistrationRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45821F9E74C00761C09 /* RegistrationRouterProtocol.swift */; };
 		ED9ED45B21F9E75600761C09 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45A21F9E75600761C09 /* RegistrationRouter.swift */; };
 		ED9ED45D21F9E76500761C09 /* RegistrationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ED45C21F9E76500761C09 /* RegistrationViewProtocol.swift */; };
+		EDA3343F228200A100180272 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA3343E228200A100180272 /* SplashViewController.swift */; };
 		EDA550F221FB522D0008B9DC /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA550F121FB522D0008B9DC /* ForgetPasswordViewController.swift */; };
 		EDBEF68F226F95BC009E7865 /* LiveLectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBEF68E226F95BC009E7865 /* LiveLectureViewController.swift */; };
 		EDD7392321F6FEC600CAC9FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7392221F6FEC600CAC9FD /* User.swift */; };
@@ -161,6 +162,7 @@
 		ED9ED45821F9E74C00761C09 /* RegistrationRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouterProtocol.swift; sourceTree = "<group>"; };
 		ED9ED45A21F9E75600761C09 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
 		ED9ED45C21F9E76500761C09 /* RegistrationViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewProtocol.swift; sourceTree = "<group>"; };
+		EDA3343E228200A100180272 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		EDA550F121FB522D0008B9DC /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		EDBEF68E226F95BC009E7865 /* LiveLectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLectureViewController.swift; sourceTree = "<group>"; };
 		EDD7392221F6FEC600CAC9FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -748,6 +750,7 @@
 				EDF66BB221F4CEED00A4974A /* Login */,
 				ED1FF5C4227313C900811591 /* tmpVC.swift */,
 				ED6E6B5D2281BDAE0095FD4C /* vc.swift */,
+				EDA3343E228200A100180272 /* SplashViewController.swift */,
 			);
 			path = "app-modules";
 			sourceTree = "<group>";
@@ -1034,6 +1037,7 @@
 				EDF66BAD21F487DB00A4974A /* ExtensionUITextField.swift in Sources */,
 				ED02F5CC227B745100236928 /* LectureListRouterProtocol.swift in Sources */,
 				ED6F69BE227582E5004C1619 /* SubjectListConfigurator.swift in Sources */,
+				EDA3343F228200A100180272 /* SplashViewController.swift in Sources */,
 				EDF66BAF21F4ABE400A4974A /* RegistrationViewController.swift in Sources */,
 				EDF66BC621F4D6D400A4974A /* LoginPresenterProtocol.swift in Sources */,
 				EDEDE9D22271F8F8005A06B8 /* AnswerScreenViewController.swift in Sources */,

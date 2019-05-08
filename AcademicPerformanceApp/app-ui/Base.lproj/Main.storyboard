@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e8U-SK-dQv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3f4-pv-Gmw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -230,6 +230,47 @@
             </objects>
             <point key="canvasLocation" x="1760.8" y="-530.28485757121439"/>
         </scene>
+        <!--Slash View Controller-->
+        <scene sceneID="M5c-8k-1NM">
+            <objects>
+                <viewController id="3f4-pv-Gmw" customClass="SlashViewController" customModule="AcademicPerformanceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="45m-hx-RLf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="TCN-BX-9sK">
+                                <rect key="frame" x="62.5" y="279.5" width="250" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="M5X-WC-bYt"/>
+                                    <constraint firstAttribute="width" constant="250" id="rCu-9n-Y1x"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lecture Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRs-nA-mku">
+                                <rect key="frame" x="79.5" y="437.5" width="216" height="64"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.27987938559999997" blue="0.43473670599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vRs-nA-mku" firstAttribute="centerX" secondItem="e8C-Xp-YSV" secondAttribute="centerX" id="1Yx-Ae-sem"/>
+                            <constraint firstItem="vRs-nA-mku" firstAttribute="top" secondItem="TCN-BX-9sK" secondAttribute="bottom" constant="30" id="2kY-ql-4fb"/>
+                            <constraint firstItem="TCN-BX-9sK" firstAttribute="centerX" secondItem="e8C-Xp-YSV" secondAttribute="centerX" id="XL9-1D-eKp"/>
+                            <constraint firstItem="TCN-BX-9sK" firstAttribute="centerY" secondItem="e8C-Xp-YSV" secondAttribute="centerY" id="bMo-R3-1S0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e8C-Xp-YSV"/>
+                    </view>
+                    <connections>
+                        <outlet property="splasLabel" destination="vRs-nA-mku" id="oiu-De-BPk"/>
+                        <outlet property="splashImage" destination="TCN-BX-9sK" id="x2P-nL-aka"/>
+                        <segue destination="e8U-SK-dQv" kind="show" identifier="showLogin" id="s4q-6p-wkJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2m-Lz-vNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="-152"/>
+        </scene>
         <!--Login Register Switcher View Controller-->
         <scene sceneID="jdv-TC-bQX">
             <objects>
@@ -239,4 +280,7 @@
             <point key="canvasLocation" x="638" y="-150"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash" width="50" height="50"/>
+    </resources>
 </document>
