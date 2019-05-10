@@ -12,6 +12,6 @@ protocol SubjectListPresenterProtocol: class {
     func setUpViewWithData() -> Void
     func subjectsLoadDidSuccessful() -> Void
     func subjectsLoadDidFail() -> Void
-    func getSubject(byId id: Int) -> (name: String, teacher: String)
+    func getSubject(byId id: Int) -> Subject
     func getCount() -> Int
 }

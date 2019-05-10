@@ -7,17 +7,26 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
-class Subject {
-    var id: Int?
+struct Subject: Firebaseable {
+    var id: String?
     var name: String?
     var teacher: String?
     var description: String?
     
-    init(id: Int, name: String, teacher: String, description: String) {
+    init(id: String?, name: String, teacher: String, description: String) {
         self.id = id
         self.name = name
         self.teacher = teacher
         self.description = description
+    }
+    
+    init?(snapshot: DataSnapshot) {
+        let value = snapshot.value as! Dictionary<String, Any>
+        self.id = value["id"] as? String
+        self.name = value["name"] as? String
+        self.description = value["description"] as? String
+        self.teacher = value["teacher"] as? String
     }
 }

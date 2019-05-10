@@ -30,9 +30,9 @@ class SubjectListPresenter: SubjectListPresenterProtocol {
         viewController.displayAlert(title: "Notice.", message: "Fail while loading subjects")
     }
     
-    func getSubject(byId id: Int) -> (name: String, teacher: String) {
+    func getSubject(byId id: Int) -> Subject {
         let subject = interactor.subjectsList[id]
-        return (subject.name ?? "", subject.teacher ?? "")
+        return subject
     }
     
     func getCount() -> Int {

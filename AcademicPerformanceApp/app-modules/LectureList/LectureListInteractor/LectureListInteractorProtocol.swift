@@ -10,6 +10,7 @@ import Foundation
 
 protocol LectureListInteractorProtocol: class {
     var lecturesList: [Lecture] {get}
+    var subject: Subject! {get set}
     
     func loadData() -> Void
 }

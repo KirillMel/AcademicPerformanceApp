@@ -15,6 +15,8 @@ class LectureListViewController: UIViewController, LectureListViewProtocol, Vipe
     
     var presenter: LectureListPresenterProtocol!
     
+    var subject: Subject!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +25,7 @@ class LectureListViewController: UIViewController, LectureListViewProtocol, Vipe
         
         configurator.configure(with: self)
         
-        presenter.setUpViewWithData()
+        presenter.setUpViewWithData(subject)
     }
     
     func reloadData() {

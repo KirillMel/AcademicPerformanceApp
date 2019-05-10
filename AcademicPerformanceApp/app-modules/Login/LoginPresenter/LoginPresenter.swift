@@ -26,7 +26,7 @@ class LoginPresenter: LoginPresenterProtocol {
     }
     
     func loginDidComplete() {
-        
+        router.moveInsideApp()
     }
     
     func loginDidFail(with error: Error) {

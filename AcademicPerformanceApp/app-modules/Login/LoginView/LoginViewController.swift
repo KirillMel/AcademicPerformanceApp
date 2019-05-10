@@ -32,6 +32,13 @@ class LoginViewController: UIViewController, LoginViewProtocol, ViperModuleTrans
         passwordTextField.isHidden = false
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        loginTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
     //MARK: - UI setups
     func setUpUI() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(forgetPasswordClicked(_:)))
@@ -68,8 +75,8 @@ class LoginViewController: UIViewController, LoginViewProtocol, ViperModuleTrans
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
-        //performLogin(username: loginTextField.text, password: passwordTextField.text)
-        performSegue(withIdentifier: "insideAppSegue", sender: nil)
+        performLogin(username: loginTextField.text, password: passwordTextField.text)
+        //performSegue(withIdentifier: "insideAppSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

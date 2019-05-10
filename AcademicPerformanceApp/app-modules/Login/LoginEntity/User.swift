@@ -9,7 +9,11 @@
 import Foundation
 
 class User: Codable {
+    var id: String?
     var name: String?
     var surname: String?
     var login: String?
+    var email: String?
+    var isTeacher: Bool?
+    var group: String?
 }

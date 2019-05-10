@@ -12,6 +12,7 @@ class LoginInteractor: LoginInteractorProtocol {
     weak var presenter: LoginPresenterProtocol!
     private let validationService: ValidationServiceProtocol! = ValidationService()
     private let authorizationService: AuthServiceProtocol! = RemoteAuthService()
+    private let authFB = AuthorizationService()
     
     init(presenter: LoginPresenterProtocol){
         self.presenter = presenter
@@ -23,8 +24,17 @@ class LoginInteractor: LoginInteractorProtocol {
             return
         }
         
-        if (!authorizationService.loginWithAPICall(route: "https://api.openaq.org/v1/cities", username: "f", password: "f")){
-            presenter.loginDidFail(with: authorizationService.error ?? NetworkError.unavailable)
+//        if (!authorizationService.loginWithAPICall(route: "https://api.openaq.org/v1/cities", username: "f", password: "f")){
+//            presenter.loginDidFail(with: authorizationService.error ?? NetworkError.unavailable)
+//        }
+        
+        authFB.perform(username, password) { error in
+            if let error = error {
+                self.presenter.loginDidFail(with: error)
+            } else {
+                self.presenter.loginDidComplete()
+            }
+            
         }
         
     }

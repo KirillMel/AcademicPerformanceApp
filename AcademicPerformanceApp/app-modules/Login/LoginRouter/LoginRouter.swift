@@ -29,6 +29,8 @@ class LoginRouter: LoginRouterProtocol {
     }
     
     func moveInsideApp() {
-        
+        viewController.openModule(segueIdentifier: "insideAppSegue") {_ in 
+            
+        }
     }
 }

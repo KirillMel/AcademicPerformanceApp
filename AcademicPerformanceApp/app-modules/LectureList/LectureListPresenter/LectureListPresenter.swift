@@ -18,7 +18,8 @@ class LectureListPresenter: LectureListPresenterProtocol {
         self.viewController = viewController
     }
     
-    func setUpViewWithData() {
+    func setUpViewWithData(_ subject: Subject) {
+        interactor.subject = subject
         interactor.loadData()
     }
     

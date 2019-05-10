@@ -28,14 +28,14 @@ class SubjectListViewController: UIViewController, SubjectListViewProtocol, Vipe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! LectureListViewController
-        
-        vc.title = sender as? String
+                
+        vc.subject = sender as? Subject
     }
     
     func reloadData() {
-        tableView.beginUpdates()
-        tableView.reloadData()
-        tableView.endUpdates()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
 }
@@ -59,6 +59,6 @@ extension SubjectListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = presenter.getSubject(byId: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "segueToLecturesList", sender: item.name)
+        performSegue(withIdentifier: "segueToLecturesList", sender: item)
     }
 }
