@@ -18,19 +18,30 @@ class AnswersListviewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     
     var answers = [Answer]()
+    let loader = ItemLoaderService<Answer>()
+    let builder = EntityBuilder()
     
-    var question: String?
+    var currentQuestion: Question?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let item = Answer(id: 1, text: "Answer 1", likedBy: nil, postedBy: 1)
-        let item1 = Answer(id: 1, text: "Hey, Man! It is very long answer... 1 2 3 4 5 it is all", likedBy: nil, postedBy: 1)
-        
-        answers.append(contentsOf: [item, item1])
+        if let question = currentQuestion {
+            loader.loadItems(folderName: "answers") { result in
+                for item in result! {
+                    if item.questionId! == self.currentQuestion?.id! {
+                        self.answers.append(item)
+                    }
+                }
+                
+                if (self.answers.count > 0) {
+                    self.tableView.reloadData()
+                }
+            }
+        }
         
         self.title = "Answers"
-        self.questionLabel?.text = question!
+        self.questionLabel?.text = currentQuestion?.text!
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -50,8 +61,14 @@ class AnswersListviewController: UIViewController {
 
 extension AnswersListviewController: AnswerDelegate {
     func addAnswer(_ answer: String) {
-        answers.append(Answer(id: 1, text: answer, likedBy: nil, postedBy: 1))
+        let id = UUID()
+        let answer = Answer(id: "\(id)", text: answer, questionId: self.currentQuestion!.id!)
+        answers.append(answer)
         tableView.reloadData()
+        
+        let newValue = ["id": answer.id!, "text": answer.text!, "questionId": answer.questionId!]
+        
+        builder.build(folder: "answers", value: newValue, id: answer.id!)
     }
 }
 

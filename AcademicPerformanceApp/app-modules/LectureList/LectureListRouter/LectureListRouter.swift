@@ -16,6 +16,8 @@ class LectureListRouter: LectureListRouterProtocol {
     }
     
     func segueToQuestions() {
-        
+//        viewController.openModule(segueIdentifier: "segueToQuestions") { item in
+//            
+//        }
     }
 }

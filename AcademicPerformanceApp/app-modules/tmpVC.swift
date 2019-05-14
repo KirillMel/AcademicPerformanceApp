@@ -33,7 +33,8 @@ class ProfileViewController: UIViewController {
         
         titleLabel.font = UIFont(name: "noteworthy-bold", size: 28)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "Student"
+        let group = user.group?.uppercased()
+        titleLabel.text = "Student \(group ?? "")"
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.text = user.name
         nameLabel.font = UIFont.boldSystemFont(ofSize: 17.0)

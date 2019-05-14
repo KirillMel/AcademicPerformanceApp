@@ -13,6 +13,8 @@ class RegistrationInteractor: RegistrationInteractorProtocol {
     var validationService: ValidationServiceProtocol! = ValidationService()
     var authorizationService: AuthServiceProtocol! = RemoteAuthService()
     
+    var authService = AuthorizationService()
+    
     init(presenter: RegistrationPresenterProtocol){
         self.presenter = presenter
     }
@@ -28,10 +30,18 @@ class RegistrationInteractor: RegistrationInteractorProtocol {
             return
         }
         
-        if (!authorizationService.loginWithAPICall(route: "https://api.openaq.org/v1/cities", username: "f", password: "f")){
-            presenter.registrationDidFail(with: authorizationService.error ?? NetworkError.unavailable)
-        } else {
-            presenter.registrationDidComplete()//sent user to a presenter
+//        if (!authorizationService.loginWithAPICall(route: "https://api.openaq.org/v1/cities", username: username, password: password)){
+//            presenter.registrationDidFail(with: authorizationService.error ?? NetworkError.unavailable)
+//        } else {
+//            presenter.registrationDidComplete()//sent user to a presenter
+//        }
+        
+        self.authService.createUser(email, password, username) { error in
+            if let error = error {
+                self.presenter.registrationDidFail(with: error)
+            } else {
+                self.presenter.registrationDidComplete()
+            }
         }
     }
 }

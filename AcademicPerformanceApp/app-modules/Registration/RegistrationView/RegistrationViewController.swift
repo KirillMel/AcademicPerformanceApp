@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController, RegistrationViewProtocol {
+class RegistrationViewController: UIViewController, RegistrationViewProtocol, ViperModuleTransitionHandler {
     
     let configurator: RegistrationConfiguratorProtocol! = RegistrationConfigurator()
     var presenter: RegistrationPresenterProtocol!
@@ -22,6 +22,14 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol {
     override func viewDidLoad() {
         configurator.configure(with: self)
         setUpUI()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        usernameTextField.text = ""
     }
     
     func setUpUI() {

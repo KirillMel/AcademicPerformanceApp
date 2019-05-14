@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
-class User: Codable {
+class User: Codable, Firebaseable {
     var id: String?
     var name: String?
     var surname: String?
@@ -16,4 +17,15 @@ class User: Codable {
     var email: String?
     var isTeacher: Bool?
     var group: String?
+    
+    required init?(snapshot: DataSnapshot) {
+        let value = snapshot.value as! Dictionary<String,Any>
+        self.name = value["name"] as? String
+        self.isTeacher = value["isteacher"] as? Bool
+        self.group = value["group"] as? String
+    }
+    
+    init() {
+        
+    }
 }

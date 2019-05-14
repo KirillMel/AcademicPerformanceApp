@@ -17,32 +17,55 @@ class AuthorizationService {
         Auth.auth().signIn(withEmail: email, password: password) { user, error in
             if let error = error, user == nil {
                 completion(error)
+                return
             }
             
-            self.ref.child("users").child(user?.user.uid ?? "gX5RfCVEBhfvcbb36zVe6qLHZcf1").observeSingleEvent(of: .value, with: { (snapshot) in
-                let value = snapshot.value as! Dictionary<String,Any>
-                let name = value["name"] as! String
-                let isTeacher = value["isTeacher"] as! Bool
-                let group = value["group"] as! String
+            self.ref.child("users").child((user?.user.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+                let currentUser = User(snapshot: snapshot)
+                currentUser?.email = user?.user.email
+                currentUser?.id = user?.user.uid
                 
-                let currentUser = User()
-                currentUser.email = user?.user.email
-                currentUser.id = user?.user.uid
-                currentUser.name = name
-                currentUser.isTeacher = isTeacher
-                currentUser.group = group
-                
-                let encoder = JSONEncoder()
-                if let encoded = try? encoder.encode(currentUser) {
-                    let defaults = UserDefaults.standard
-                    defaults.set(encoded, forKey: "currentUser")
-                }
+                self.saveLocal(currentUser!)
                 
             }) { (error) in
                 print(error.localizedDescription)
             }
             
             completion(nil)
+        }
+    }
+    
+    func createUser(_ email: String, _ password: String, _ name: String, completion: @escaping (Error?) -> Void) {
+        Auth.auth().createUser(withEmail: email, password: password) { authresult, error in
+            if let error = error {
+                completion(error)
+                return
+            }
+            
+            let id = (authresult?.user.uid)!
+            
+            let value = ["group": "ti-51", "isteacher": false, "name": name] as [String : Any]
+            
+            self.ref.child("users").child(id).setValue(value)
+            
+            let currentUser = User()
+            currentUser.email = email
+            currentUser.group = "ti-51"
+            currentUser.isTeacher = false
+            currentUser.name = name
+            currentUser.id = id
+            
+            self.saveLocal(currentUser)
+            
+            completion(nil)
+        }
+    }
+    
+    private func saveLocal(_ user: User) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(user) {
+            let defaults = UserDefaults.standard
+            defaults.set(encoded, forKey: "currentUser")
         }
     }
 }

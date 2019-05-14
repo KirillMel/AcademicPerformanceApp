@@ -9,13 +9,15 @@
 import Foundation
 
 class RegistrationRouter: RegistrationRouterProtocol {
-    weak var viewController: RegistrationViewProtocol!
+    weak var viewController: ViperModuleTransitionHandler!
     
-    init(viewController: RegistrationViewProtocol) {
+    init(viewController: ViperModuleTransitionHandler) {
         self.viewController = viewController
     }
     
     func moveInsideApp() {
-        
+        viewController.openModule(segueIdentifier: "insideAppSegue") {_ in
+            
+        }
     }
 }

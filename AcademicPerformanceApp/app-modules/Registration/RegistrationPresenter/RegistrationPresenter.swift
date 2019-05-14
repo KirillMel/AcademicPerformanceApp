@@ -27,11 +27,11 @@ class RegistrationPresenter: RegistrationPresenterProtocol {
             registrationDidFail(with: ErrorPointer.none as! Error)
             return
          }
-        interactor.performRegistration(username: email, email: password, password: password)
+        interactor.performRegistration(username: username, email: email, password: password)
     }
     
-    func registrationDidComplete(/*user param*/) {
-        // set user to user defaults or in db, prepare data for view and segue 
+    func registrationDidComplete() {
+        router.moveInsideApp()
     }
     
     func registrationDidFail(with error: Error) {

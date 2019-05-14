@@ -108,6 +108,7 @@
                         <outlet property="passwordTextField" destination="ZWi-G7-5ec" id="0pH-vb-nts"/>
                         <outlet property="registerButton" destination="g7t-mS-Hq3" id="wqx-pH-ftX"/>
                         <outlet property="usernameTextField" destination="Hsr-B8-lwt" id="Q9G-04-gfQ"/>
+                        <segue destination="Wcb-2g-GbY" kind="show" identifier="insideAppSegue" id="sam-U5-p5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Agy-1h-TsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,7 +121,7 @@
                 <viewControllerPlaceholder storyboardName="TabsScreen" id="Wcb-2g-GbY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mzn-cd-re6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2319" y="-992"/>
+            <point key="canvasLocation" x="2415" y="-81"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="wGD-Se-hs3">
@@ -283,4 +284,7 @@
     <resources>
         <image name="splash" width="50" height="50"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="sam-U5-p5h"/>
+    </inferredMetricsTieBreakers>
 </document>

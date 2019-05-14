@@ -31,8 +31,8 @@ class LectureListPresenter: LectureListPresenterProtocol {
         
     }
     
-    func getLecture(byId id: Int) -> String {
-        return interactor.lecturesList[id].description ?? ""
+    func getLecture(byId id: Int) -> Lecture {
+        return interactor.lecturesList[id]
     }
     
     func getCount() -> Int {

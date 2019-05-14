@@ -125,7 +125,7 @@
             </objects>
             <point key="canvasLocation" x="1060" y="1097"/>
         </scene>
-        <!--Settings-->
+        <!--Profile-->
         <scene sceneID="58p-ZJ-bJe">
             <objects>
                 <viewController id="55x-xU-b4a" customClass="ProfileViewController" customModule="AcademicPerformanceApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,9 +144,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JY2-jr-dlj">
-                                        <rect key="frame" x="122.5" y="8" width="130" height="21"/>
+                                        <rect key="frame" x="87.5" y="8" width="200" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="130" id="I5G-0T-3E0"/>
+                                            <constraint firstAttribute="width" constant="200" id="I5G-0T-3E0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -225,7 +225,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IVB-4O-TWz"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="xBV-gY-TTM"/>
+                    <navigationItem key="navigationItem" title="Profile" id="xBV-gY-TTM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailLabel" destination="Tbm-f1-PEg" id="xmq-vC-5Mw"/>
@@ -759,11 +759,11 @@
             </objects>
             <point key="canvasLocation" x="120.8" y="313.49325337331339"/>
         </scene>
-        <!--Settings-->
+        <!--Profile-->
         <scene sceneID="pVn-yJ-kUl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rrs-xH-ARc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="ZJV-94-KL0"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="settings" id="ZJV-94-KL0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PQ1-ug-Aq1">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

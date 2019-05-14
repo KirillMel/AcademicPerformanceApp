@@ -1,29 +1,29 @@
 //
-//  Answer.swift
+//  Question.swift
 //  AcademicPerformanceApp
 //
-//  Created by kirill on 4/29/19.
+//  Created by kirill on 5/10/19.
 //  Copyright © 2019 kirill. All rights reserved.
 //
 
 import Foundation
 import FirebaseDatabase
 
-class Answer: Firebaseable {
-    var id: String?
+class Question: Firebaseable {
     var text: String?
-    var questionId: String?
+    var id: String?
+    var lectureId: String?
     
-    init(id: String, text: String, questionId: String ) {
-        self.id = id
+    init(text: String, id: String, lectureId: String) {
         self.text = text
-        self.questionId = questionId
+        self.id = id
+        self.lectureId = lectureId
     }
     
     required init?(snapshot: DataSnapshot) {
         let value = snapshot.value as! Dictionary<String, Any>
         self.text = value["text"] as? String
         self.id = value["id"] as? String
-        self.questionId = value["questionId"] as? String
+        self.lectureId = value["lectureId"] as? String
     }
 }

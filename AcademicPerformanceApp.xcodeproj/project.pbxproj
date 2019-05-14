@@ -22,7 +22,11 @@
 		ED0EE7E8220475F500E4726B /* ViperModuleTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EE7E7220475F500E4726B /* ViperModuleTransitionHandler.swift */; };
 		ED1A414621F9BF760005A877 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A414521F9BF760005A877 /* ExtensionUIColor.swift */; };
 		ED1E47AF22856CA700C883E7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E47AE22856CA700C883E7 /* AboutViewController.swift */; };
+		ED1E47B12285A27300C883E7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E47B02285A27300C883E7 /* Question.swift */; };
+		ED1E47B32285A4EE00C883E7 /* LiveObservingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E47B22285A4EE00C883E7 /* LiveObservingServices.swift */; };
+		ED1E47B52285A57300C883E7 /* EntityBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E47B42285A57300C883E7 /* EntityBuilder.swift */; };
 		ED1FF5C5227313C900811591 /* tmpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF5C4227313C900811591 /* tmpVC.swift */; };
+		ED402FC32289745300733607 /* LiveLecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED402FC22289745300733607 /* LiveLecture.swift */; };
 		ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED499B1821F21C7F00AF32FD /* LoginViewController.swift */; };
 		ED49B40322705370003AFFE5 /* BubbleCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49B40222705370003AFFE5 /* BubbleCells.swift */; };
 		ED49B4062270670F003AFFE5 /* AnswersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49B4052270670F003AFFE5 /* AnswersListViewController.swift */; };
@@ -135,7 +139,11 @@
 		ED0EE7E7220475F500E4726B /* ViperModuleTransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperModuleTransitionHandler.swift; sourceTree = "<group>"; };
 		ED1A414521F9BF760005A877 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		ED1E47AE22856CA700C883E7 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		ED1E47B02285A27300C883E7 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		ED1E47B22285A4EE00C883E7 /* LiveObservingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveObservingServices.swift; sourceTree = "<group>"; };
+		ED1E47B42285A57300C883E7 /* EntityBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityBuilder.swift; sourceTree = "<group>"; };
 		ED1FF5C4227313C900811591 /* tmpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmpVC.swift; sourceTree = "<group>"; };
+		ED402FC22289745300733607 /* LiveLecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLecture.swift; sourceTree = "<group>"; };
 		ED499B1821F21C7F00AF32FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED49B40222705370003AFFE5 /* BubbleCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCells.swift; sourceTree = "<group>"; };
 		ED49B4052270670F003AFFE5 /* AnswersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersListViewController.swift; sourceTree = "<group>"; };
@@ -536,6 +544,8 @@
 			isa = PBXGroup;
 			children = (
 				EDBEF68E226F95BC009E7865 /* LiveLectureViewController.swift */,
+				ED1E47B02285A27300C883E7 /* Question.swift */,
+				ED402FC22289745300733607 /* LiveLecture.swift */,
 			);
 			path = LiveLecture;
 			sourceTree = "<group>";
@@ -751,6 +761,8 @@
 				EDD7392421F7297E00CAC9FD /* ServerService.swift */,
 				ED8A4F302282C1280033DAB2 /* AuthFBService.swift */,
 				ED8A4F322282EF5F0033DAB2 /* ItemLoader.swift */,
+				ED1E47B22285A4EE00C883E7 /* LiveObservingServices.swift */,
+				ED1E47B42285A57300C883E7 /* EntityBuilder.swift */,
 			);
 			path = "app-services";
 			sourceTree = "<group>";
@@ -1036,10 +1048,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDF66BBE21F4D62A00A4974A /* LoginViewProtocol.swift in Sources */,
+				ED1E47B32285A4EE00C883E7 /* LiveObservingServices.swift in Sources */,
 				ED819BC521F60F5E007956F3 /* ErrorsExtension.swift in Sources */,
 				EDD7392521F7297E00CAC9FD /* ServerService.swift in Sources */,
 				ED9C09C12277695A00716666 /* Answer.swift in Sources */,
 				ED49B408227084D4003AFFE5 /* AnswerCell.swift in Sources */,
+				ED402FC32289745300733607 /* LiveLecture.swift in Sources */,
 				EDF0028421FF7F7E00FC5E6D /* ForgetPasswordConfiguratorProtocol.swift in Sources */,
 				ED6E6B5E2281BDAE0095FD4C /* vc.swift in Sources */,
 				ED02F5C4227B741B00236928 /* LectureListInteractorProtocol.swift in Sources */,
@@ -1056,6 +1070,7 @@
 				EDF66BC821F4D6ED00A4974A /* LoginPresenter.swift in Sources */,
 				ED6F69AE22757EAA004C1619 /* SubjectListView.swift in Sources */,
 				ED6F69BC227582DA004C1619 /* SubjectListConfiguratorProtocol.swift in Sources */,
+				ED1E47B12285A27300C883E7 /* Question.swift in Sources */,
 				EDF0028C21FF7FB600FC5E6D /* ForgetPasswordPresenterProtocol.swift in Sources */,
 				ED9ED44F21F9E6F700761C09 /* RegistrationConfigurator.swift in Sources */,
 				ED0EE7E8220475F500E4726B /* ViperModuleTransitionHandler.swift in Sources */,
@@ -1099,6 +1114,7 @@
 				ED02F5C6227B742800236928 /* LectureListInteractor.swift in Sources */,
 				EDF66BC421F4D6BD00A4974A /* LoginInteractor.swift in Sources */,
 				ED6F69B022757F5B004C1619 /* SubjectListRouter.swift in Sources */,
+				ED1E47B52285A57300C883E7 /* EntityBuilder.swift in Sources */,
 				EDDEB47921F0A71000330EE1 /* AppDelegate.swift in Sources */,
 				ED49B40322705370003AFFE5 /* BubbleCells.swift in Sources */,
 				ED1FF5C5227313C900811591 /* tmpVC.swift in Sources */,

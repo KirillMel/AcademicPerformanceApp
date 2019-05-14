@@ -31,6 +31,12 @@ class LectureListViewController: UIViewController, LectureListViewProtocol, Vipe
     func reloadData() {
         tableView.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var vc = segue.destination as! LiveLectureViewController
+        
+        vc.currentLecture = sender as! Lecture
+    }
 }
 
 extension LectureListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -41,12 +47,12 @@ extension LectureListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lectureCell")!
         
-        cell.textLabel?.text = presenter.getLecture(byId: indexPath.row)
+        cell.textLabel?.text = presenter.getLecture(byId: indexPath.row).description!
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueToQuestions", sender: nil)
+        performSegue(withIdentifier: "segueToQuestions", sender: presenter.getLecture(byId: indexPath.row))
     }
 }
