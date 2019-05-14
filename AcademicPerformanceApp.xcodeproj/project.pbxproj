@@ -27,6 +27,7 @@
 		ED1E47B52285A57300C883E7 /* EntityBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1E47B42285A57300C883E7 /* EntityBuilder.swift */; };
 		ED1FF5C5227313C900811591 /* tmpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF5C4227313C900811591 /* tmpVC.swift */; };
 		ED402FC32289745300733607 /* LiveLecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED402FC22289745300733607 /* LiveLecture.swift */; };
+		ED403282228AB36B007FD2C2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED403281228AB36B007FD2C2 /* Reachability.swift */; };
 		ED499B1921F21C7F00AF32FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED499B1821F21C7F00AF32FD /* LoginViewController.swift */; };
 		ED49B40322705370003AFFE5 /* BubbleCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49B40222705370003AFFE5 /* BubbleCells.swift */; };
 		ED49B4062270670F003AFFE5 /* AnswersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED49B4052270670F003AFFE5 /* AnswersListViewController.swift */; };
@@ -144,6 +145,7 @@
 		ED1E47B42285A57300C883E7 /* EntityBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityBuilder.swift; sourceTree = "<group>"; };
 		ED1FF5C4227313C900811591 /* tmpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmpVC.swift; sourceTree = "<group>"; };
 		ED402FC22289745300733607 /* LiveLecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveLecture.swift; sourceTree = "<group>"; };
+		ED403281228AB36B007FD2C2 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		ED499B1821F21C7F00AF32FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ED49B40222705370003AFFE5 /* BubbleCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCells.swift; sourceTree = "<group>"; };
 		ED49B4052270670F003AFFE5 /* AnswersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersListViewController.swift; sourceTree = "<group>"; };
@@ -381,6 +383,22 @@
 				EDDEB47A21F0A71000330EE1 /* ViewController.swift */,
 			);
 			path = LoginRegisterSwitcherView;
+			sourceTree = "<group>";
+		};
+		ED403283228AD9E7007FD2C2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				ED1FF5C4227313C900811591 /* tmpVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		ED403284228AD9FD007FD2C2 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EDA3343E228200A100180272 /* SplashViewController.swift */,
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 		ED49B40122705359003AFFE5 /* Cells */ = {
@@ -679,6 +697,7 @@
 		EDF66BAB21F4878F00A4974A /* ui-utils */ = {
 			isa = PBXGroup;
 			children = (
+				ED6E6B5D2281BDAE0095FD4C /* vc.swift */,
 				EDF66BAC21F487DB00A4974A /* ExtensionUITextField.swift */,
 				ED1A414521F9BF760005A877 /* ExtensionUIColor.swift */,
 				ED0EE7E7220475F500E4726B /* ViperModuleTransitionHandler.swift */,
@@ -763,6 +782,7 @@
 				ED8A4F322282EF5F0033DAB2 /* ItemLoader.swift */,
 				ED1E47B22285A4EE00C883E7 /* LiveObservingServices.swift */,
 				ED1E47B42285A57300C883E7 /* EntityBuilder.swift */,
+				ED403281228AB36B007FD2C2 /* Reachability.swift */,
 			);
 			path = "app-services";
 			sourceTree = "<group>";
@@ -770,6 +790,8 @@
 		EDF9B17D21F30DDB00599888 /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
+				ED403284228AD9FD007FD2C2 /* SplashScreen */,
+				ED403283228AD9E7007FD2C2 /* Profile */,
 				ED1E47AD22856C8E00C883E7 /* About */,
 				EDEDE9D02271F8DD005A06B8 /* AnswerScreen */,
 				EDEDE9CD2271EDAE005A06B8 /* LectureList */,
@@ -780,9 +802,6 @@
 				EDA550EF21FB4ECF0008B9DC /* ForgetPassword */,
 				ED9ED44521F9E5FB00761C09 /* Registration */,
 				EDF66BB221F4CEED00A4974A /* Login */,
-				ED1FF5C4227313C900811591 /* tmpVC.swift */,
-				ED6E6B5D2281BDAE0095FD4C /* vc.swift */,
-				EDA3343E228200A100180272 /* SplashViewController.swift */,
 			);
 			path = "app-modules";
 			sourceTree = "<group>";
@@ -1079,6 +1098,7 @@
 				ED02F5C2227B740800236928 /* LectureListViewProtocol.swift in Sources */,
 				EDDEB48121F0A71000330EE1 /* AcademicPerformanceApp.xcdatamodeld in Sources */,
 				EDF0029421FF802300FC5E6D /* ForgetPasswordViewProtocol.swift in Sources */,
+				ED403282228AB36B007FD2C2 /* Reachability.swift in Sources */,
 				EDDEB47B21F0A71000330EE1 /* ViewController.swift in Sources */,
 				EDD7392321F6FEC600CAC9FD /* User.swift in Sources */,
 				ED02F5C8227B743700236928 /* LectureListPresenterProtocol.swift in Sources */,

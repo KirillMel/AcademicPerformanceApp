@@ -13,8 +13,8 @@ class LiveLectureViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    
-    var messages = ["mesgfjhsdgfhsdgfhgd hfgsdfywgfyuwg ywgrywegruywg gfs dfjsbdkfs","tmp"]
+
+    @IBOutlet weak var chatView: UIView!
     var questions = [Question]()
     
     var currentLecture: Lecture?
@@ -22,14 +22,30 @@ class LiveLectureViewController: UIViewController {
     let builder = EntityBuilder()
     let loader = ItemLoaderService<Question>()
     
+    var isLive: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         if let lecture = currentLecture {
             self.title = lecture.description!
             self.loadQuestions(forLectureId: (currentLecture?.id!)!)
+            self.isLive = false
         }
         else {
+            self.isLive = true
+            
+            guard Connectivity.isConnectedToInternet() else {
+                self.displayAlert(title: "Error.", message: "Can't load questions. Check your internet connection.")
+                return
+            }
             let liveLectureLoader = ItemLoaderService<LiveEntity>()
             liveLectureLoader.loadItems(folderName: "live") { result in
                 if let result = result {
@@ -39,11 +55,21 @@ class LiveLectureViewController: UIViewController {
                 }
             }
         }
-        tableView.dataSource = self
-        tableView.delegate = self
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        questions = [Question]()
+        tableView.reloadData()
     }
     
     private func loadQuestions(forLectureId id: String) {
+        guard Connectivity.isConnectedToInternet() else {
+            self.displayAlert(title: "Error.", message: "Can't load questions. Check your internet connection.")
+            return
+        }
+        
         loader.loadItems(folderName: "questions") { result in
             for item in result! {
                 if item.lectureId! == id {
@@ -61,22 +87,27 @@ class LiveLectureViewController: UIViewController {
     @IBAction func sendButton_Clicked(_ sender: Any) {
         guard !textField.text!.isEmpty else { return }
         
-        let question = Question(text: textField.text!, id: "\(questions.count)", lectureId: currentLecture!.id!)
-        questions.append(question)
-//        tableView.beginUpdates()
-//        tableView.insertRows(at: [IndexPath(row: messages.count - 1, section: 0)], with: .automatic)
-//        tableView.endUpdates()
-//        tableView.scrollToRow(at: IndexPath(row: messages.count - 1, section: 0), at: .bottom, animated: true)
+        guard isLive else {
+            displayAlert(title: "Notice.", message: "Can't ask question. The lecture is closed.")
+            return
+        }
         
+        if Connectivity.isConnectedToInternet() {
         
-        let newValue = ["id": question.id!, "text": question.text!, "lectureId": question.lectureId!]
-        
-        builder.build(folder: "questions", value: newValue, id: question.id!)
-        
-        tableView.reloadData()
-        tableView.scrollToRow(at: IndexPath(row: questions.count - 1, section: 0), at: .bottom, animated: true)
-        
-        textField.text = ""
+            let question = Question(text: textField.text!, id: "\(questions.count)", lectureId: currentLecture!.id!)
+            questions.append(question)
+            
+            let newValue = ["id": question.id!, "text": question.text!, "lectureId": question.lectureId!]
+            
+            builder.build(folder: "questions", value: newValue, id: question.id!)
+            
+            tableView.reloadData()
+            tableView.scrollToRow(at: IndexPath(row: questions.count - 1, section: 0), at: .bottom, animated: true)
+            
+            textField.text = ""
+        } else {
+            displayAlert(title: "Error.", message: "Can't ask question. Check your internet connection.")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

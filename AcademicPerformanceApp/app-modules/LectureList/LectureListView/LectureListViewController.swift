@@ -15,7 +15,7 @@ class LectureListViewController: UIViewController, LectureListViewProtocol, Vipe
     
     var presenter: LectureListPresenterProtocol!
     
-    var subject: Subject!
+    var subject: Subject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,20 @@ class LectureListViewController: UIViewController, LectureListViewProtocol, Vipe
         tableView.dataSource = self
         
         configurator.configure(with: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.title = subject?.name
         
         presenter.setUpViewWithData(subject)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        presenter.setUpViewWithData(nil)
     }
     
     func reloadData() {
@@ -33,9 +45,9 @@ class LectureListViewController: UIViewController, LectureListViewProtocol, Vipe
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var vc = segue.destination as! LiveLectureViewController
+        let vc = segue.destination as! LiveLectureViewController
         
-        vc.currentLecture = sender as! Lecture
+        vc.currentLecture = sender as? Lecture
     }
 }
 

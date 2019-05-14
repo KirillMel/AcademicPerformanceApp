@@ -28,7 +28,6 @@ class ProfileViewController: UIViewController {
     }
    
     func buildHeaderView() {
-        
         let user = UserDefaults.standard.getUser()!
         
         titleLabel.font = UIFont(name: "noteworthy-bold", size: 28)

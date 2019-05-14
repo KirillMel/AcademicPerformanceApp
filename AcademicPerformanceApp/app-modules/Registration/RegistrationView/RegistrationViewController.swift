@@ -19,6 +19,7 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol, Vi
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         configurator.configure(with: self)
         setUpUI()
@@ -52,6 +53,7 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol, Vi
     
     
     @IBAction func registerButtonClicked(_ sender: Any) {
+        activityIndicator.startAnimating()
         performRegistration(username: usernameTextField.text, email: emailTextField.text, password: passwordTextField.text)
     }
     
@@ -63,7 +65,12 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol, Vi
         presenter.performRegistration(username: username, email: email, password: password)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        activityIndicator.stopAnimating()
+    }
+    
     func showError(error: String) {
+        activityIndicator.stopAnimating()
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)

@@ -23,6 +23,10 @@ class SubjectListViewController: UIViewController, SubjectListViewProtocol, Vipe
         tableView.dataSource = self
         
         configurator.configure(with: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         presenter.setUpViewWithData()
     }
     
@@ -51,7 +55,7 @@ extension SubjectListViewController: UITableViewDelegate, UITableViewDataSource 
         let item = presenter.getSubject(byId: indexPath.row)
         
         cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = item.teacher
+        cell.detailTextLabel?.text = item.description
         
         return cell
     }

@@ -20,6 +20,7 @@ class LoginViewController: UIViewController, LoginViewProtocol, ViperModuleTrans
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgetPasswordLabel: UILabel!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     //MARK: - Life cycle
     override func viewDidLoad() {
         configurator.configure(with: self)
@@ -75,11 +76,13 @@ class LoginViewController: UIViewController, LoginViewProtocol, ViperModuleTrans
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
+        activityIndicator.startAnimating()
         performLogin(username: loginTextField.text, password: passwordTextField.text)
-        //performSegue(withIdentifier: "insideAppSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        activityIndicator.stopAnimating()
+        
         let configurationHolder = segue.destination as? ForgetPasswordViewController
         configurationHolder?.CreateModule()
         (sender as? SegueInfo)?.configurationBlock?(configurationHolder?.presenter)
@@ -112,6 +115,7 @@ class LoginViewController: UIViewController, LoginViewProtocol, ViperModuleTrans
     }
     
     func showError(error: String) {
+        activityIndicator.stopAnimating()
         let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)

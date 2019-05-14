@@ -20,6 +20,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl2-Ru-TOL" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="215"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aVt-dS-QZg">
+                                        <rect key="frame" x="152.5" y="125" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Rko-OK-iXb"/>
+                                            <constraint firstAttribute="height" constant="70" id="ZSy-G4-Rba"/>
+                                        </constraints>
+                                        <color key="color" red="1" green="0.27987938559999997" blue="0.43473670599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aVt-dS-QZg" secondAttribute="bottom" constant="20" id="02q-dU-Y76"/>
+                                    <constraint firstItem="aVt-dS-QZg" firstAttribute="centerX" secondItem="Yl2-Ru-TOL" secondAttribute="centerX" id="In9-lU-rv5"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-6A-KwF" userLabel="FormView">
                                 <rect key="frame" x="0.0" y="235" width="375" height="222.5"/>
@@ -104,6 +118,7 @@
                         <viewLayoutGuide key="safeArea" id="t60-Fg-HMJ"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="aVt-dS-QZg" id="tM1-4z-ZFK"/>
                         <outlet property="emailTextField" destination="a2W-3r-iy8" id="agP-kD-qef"/>
                         <outlet property="passwordTextField" destination="ZWi-G7-5ec" id="0pH-vb-nts"/>
                         <outlet property="registerButton" destination="g7t-mS-Hq3" id="wqx-pH-ftX"/>
@@ -198,7 +213,21 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gG-Jb-fEk" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="215"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pn0-5T-B9e">
+                                        <rect key="frame" x="152.5" y="125" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="7FK-JO-PqS"/>
+                                            <constraint firstAttribute="width" constant="70" id="xUS-As-cpW"/>
+                                        </constraints>
+                                        <color key="color" red="1" green="0.27987938559999997" blue="0.43473670599999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="pn0-5T-B9e" firstAttribute="centerX" secondItem="0gG-Jb-fEk" secondAttribute="centerX" id="6iy-fs-zcw"/>
+                                    <constraint firstAttribute="bottom" secondItem="pn0-5T-B9e" secondAttribute="bottom" constant="20" id="VVm-TO-xwu"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <gestureRecognizers/>
@@ -220,6 +249,7 @@
                         <viewLayoutGuide key="safeArea" id="hH1-fu-YfY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="pn0-5T-B9e" id="DZw-qh-Mhx"/>
                         <outlet property="forgetPasswordLabel" destination="3Wo-wH-aEf" id="9d9-Gv-bIq"/>
                         <outlet property="loginButton" destination="ahu-PJ-zVD" id="0Hp-TB-Rsh"/>
                         <outlet property="loginTextField" destination="F25-fZ-bpa" id="CoD-9z-IKc"/>

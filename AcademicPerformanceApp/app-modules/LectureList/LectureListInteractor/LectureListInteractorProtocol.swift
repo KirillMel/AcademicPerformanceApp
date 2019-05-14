@@ -13,4 +13,5 @@ protocol LectureListInteractorProtocol: class {
     var subject: Subject! {get set}
     
     func loadData() -> Void
+    func clearData() -> Void
 }

@@ -7,9 +7,10 @@
 //
 
 import Foundation
-import FirebaseDatabase
+import CoreData
 
 class SubjectListInteractor: SubjectListInteractorProtocol {
+    let context = AppDelegate.viewContext
     //MARK: - viper layers
     weak var presenter: SubjectListPresenterProtocol!
     //MARK: - protocol impl
@@ -20,9 +21,6 @@ class SubjectListInteractor: SubjectListInteractorProtocol {
     }
     
     private let loaderService = ItemLoaderService<Subject>()
-    
-//    var ref = Database.database().reference()
-    
     var subjectsList: [Subject] = [Subject]()
     
     required init(presenter: SubjectListPresenterProtocol) {
@@ -30,22 +28,44 @@ class SubjectListInteractor: SubjectListInteractorProtocol {
     }
     
     func loadData() {
-//        let item1 = Subject(id: "1", name: "economic", teacher: "Teacher 1", description: "strange subject")
-//        let item2 = Subject(id: "2", name: "information technologies", teacher: "Teacher 2", description: "strange subject")
-//        let item3 = Subject(id: "3", name: "Logic", teacher: "Teacher 3", description: "very strange subject")
-//
-//        subjectsList.append(item1)
-//        subjectsList.append(item2)
-//        subjectsList.append(item3)
-//        self.presenter.subjectsLoadDidSuccessful()
-        
-        loaderService.loadItems(folderName: "subjects") { [weak self] result in
-            self?.subjectsList = result!
-            self?.presenter.subjectsLoadDidSuccessful()
+        if Connectivity.isConnectedToInternet() {
+            loaderService.loadItems(folderName: "subjects") { [weak self] result in
+                self?.subjectsList = result!
+                self?.presenter.subjectsLoadDidSuccessful()
+                self?.saveData(self!.subjectsList)
+            }
+        } else {
+            self.subjectsList = loadDataFromCD()!
+            if self.subjectsList.count == 0 {
+                presenter.subjectsLoadDidFail()
+            } else {
+                 self.presenter.subjectsLoadDidSuccessful()
+            }
         }
-        //tmp
-//        let id = "\(UUID())"
-//        let message = ["id" : id ,"name": "OOP", "description": "Nice description", "teacher": "linkForTeacher"]
-//        self.ref.child("groups").child(CurrentUser.get()!.group!).child("subjects").child(id).setValue(message)
+    }
+}
+
+//MARK: - Working with CoreData
+extension SubjectListInteractor {
+    func loadDataFromCD() -> [Subject]? {
+        let request: NSFetchRequest<SubjectCD> = SubjectCD.fetchRequest() as! NSFetchRequest<SubjectCD>
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        request.sortDescriptors = [sortDescriptor]
+        
+        let sources = try? context.fetch(request)
+        var result: [Subject] = [Subject]()
+        
+        for item in sources! {
+            result.append(Subject(id: item.id, name: item.name!, teacher: item.teacherId!, description: item.descriptionSubject!))
+        }
+        return result
+    }
+    
+    func saveData(_ itemSource: [Subject]) -> Void {
+        for item in itemSource {
+            let _ = try? SubjectCD.initOrFind(by: item)
+            try? context.save()
+        }
     }
 }

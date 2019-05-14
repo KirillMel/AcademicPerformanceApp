@@ -18,7 +18,11 @@ class LectureListPresenter: LectureListPresenterProtocol {
         self.viewController = viewController
     }
     
-    func setUpViewWithData(_ subject: Subject) {
+    func setUpViewWithData(_ subject: Subject?) {
+        guard let subject = subject else {
+            interactor.clearData()
+            return
+        }
         interactor.subject = subject
         interactor.loadData()
     }
@@ -28,7 +32,7 @@ class LectureListPresenter: LectureListPresenterProtocol {
     }
     
     func lecturesLoadDidFail() {
-        
+        viewController.displayAlert(title: "Error.", message: "Fail while loading data.")
     }
     
     func getLecture(byId id: Int) -> Lecture {

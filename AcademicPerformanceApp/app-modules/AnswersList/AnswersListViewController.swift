@@ -26,6 +26,19 @@ class AnswersListviewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.allowsSelection = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard Connectivity.isConnectedToInternet() else {
+            self.displayAlert(title: "Error.", message: "Can't load questions. Check your internet connection.")
+            return
+        }
+        
         if let question = currentQuestion {
             loader.loadItems(folderName: "answers") { result in
                 for item in result! {
@@ -42,10 +55,12 @@ class AnswersListviewController: UIViewController {
         
         self.title = "Answers"
         self.questionLabel?.text = currentQuestion?.text!
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.allowsSelection = false
+        answers = [Answer]()
     }
     
     @IBAction func answerButton_Clicked(_ sender: Any) {
