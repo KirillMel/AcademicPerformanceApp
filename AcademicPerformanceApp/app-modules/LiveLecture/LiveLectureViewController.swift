@@ -21,6 +21,7 @@ class LiveLectureViewController: UIViewController {
     
     let builder = EntityBuilder()
     let loader = ItemLoaderService<Question>()
+    let liveObserving = LiveObservingServices()
     
     var isLive: Bool = true
     
@@ -33,6 +34,7 @@ class LiveLectureViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        liveObserving.removeObservers()
         
         if let lecture = currentLecture {
             self.title = lecture.description!
@@ -54,7 +56,26 @@ class LiveLectureViewController: UIViewController {
                 if let result = result {
                     self.title = result.first?.lectureName ?? "Lecture"
                     self.currentLecture = Lecture(id: result.first!.lectureId!, subject: "Live", description: result.first!.lectureName!)
-                    self.loadQuestions(forLectureId: (result.first?.lectureId)!)
+                    
+                    self.liveObserving.loadItems(complition: { result in
+                        
+                        var tmpQuestions = [Question]()
+                        
+                        for item in result! {
+                            if item.lectureId! == self.currentLecture!.id! {
+                                tmpQuestions.append(item)
+                            }
+                        }
+                        
+                        let test = tmpQuestions
+                        
+                        self.questions = tmpQuestions
+                        
+                        if (self.questions.count > 0) {
+                            self.tableView.reloadData()
+                            self.tableView.scrollToRow(at: IndexPath(row: self.questions.count - 1, section: 0), at: .bottom, animated: true)
+                        }
+                    })
                 }
             }
         }
@@ -64,6 +85,8 @@ class LiveLectureViewController: UIViewController {
         super.viewDidDisappear(animated)
         
         questions = [Question]()
+        liveObserving.removeObservers()
+        
         tableView.reloadData()
     }
     
@@ -74,11 +97,16 @@ class LiveLectureViewController: UIViewController {
         }
         
         loader.loadItems(folderName: "questions") { result in
+            
+            var tmpQuestions = [Question]()
+            
             for item in result! {
                 if item.lectureId! == id {
-                    self.questions.append(item)
+                    tmpQuestions.append(item)
                 }
             }
+            
+            self.questions = tmpQuestions
             
             if (self.questions.count > 0) {
                 self.tableView.reloadData()
@@ -90,14 +118,9 @@ class LiveLectureViewController: UIViewController {
     @IBAction func sendButton_Clicked(_ sender: Any) {
         guard !textField.text!.isEmpty else { return }
         
-        guard isLive else {
-            displayAlert(title: "Notice.", message: "Can't ask question. The lecture is closed.")
-            return
-        }
-        
         if Connectivity.isConnectedToInternet() {
         
-            let question = Question(text: textField.text!, id: "\(questions.count)", lectureId: currentLecture!.id!)
+            let question = Question(text: textField.text!, id: "\(currentLecture!.id!)\(questions.count)", lectureId: currentLecture!.id!)
             questions.append(question)
             
             let newValue = ["id": question.id!, "text": question.text!, "lectureId": question.lectureId!]

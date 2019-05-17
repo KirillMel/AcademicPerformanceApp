@@ -34,6 +34,8 @@ class AnswersListviewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        answers = [Answer]()
+        
         guard Connectivity.isConnectedToInternet() else {
             self.displayAlert(title: "Error.", message: "Can't load questions. Check your internet connection.")
             return
@@ -59,8 +61,6 @@ class AnswersListviewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
-        answers = [Answer]()
     }
     
     @IBAction func answerButton_Clicked(_ sender: Any) {
@@ -76,14 +76,14 @@ class AnswersListviewController: UIViewController {
 
 extension AnswersListviewController: AnswerDelegate {
     func addAnswer(_ answer: String) {
-        let id = UUID()
-        let answer = Answer(id: "\(id)", text: answer, questionId: self.currentQuestion!.id!, accepted:  false)
+        let id = currentQuestion!.id! + "\(answers.count)"
+        let answer = Answer(id: id, text: answer, questionId: self.currentQuestion!.id!, accepted:  false)
         //answers.append(answer)
-        tableView.reloadData()
+        //tableView.reloadData()
         
-        let newValue = ["id": answer.id!, "text": answer.text!, "questionId": answer.questionId!, "accepted": false] as [String : Any]
+        let newValue = ["id": id, "text": answer.text!, "questionId": answer.questionId!, "accepted": false] as [String : Any]
         
-        builder.build(folder: "answers", value: newValue, id: answer.id!)
+        builder.build(folder: "answers", value: newValue, id: id)
     }
 }
 
