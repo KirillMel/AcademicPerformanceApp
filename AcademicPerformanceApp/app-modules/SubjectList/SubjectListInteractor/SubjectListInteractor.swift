@@ -48,6 +48,7 @@ class SubjectListInteractor: SubjectListInteractorProtocol {
 //MARK: - Working with CoreData
 extension SubjectListInteractor {
     func loadDataFromCD() -> [Subject]? {
+        //формування запиту до бази даних
         let request: NSFetchRequest<SubjectCD> = SubjectCD.fetchRequest() as! NSFetchRequest<SubjectCD>
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         
@@ -57,14 +58,17 @@ extension SubjectListInteractor {
         var result: [Subject] = [Subject]()
         
         for item in sources! {
-            result.append(Subject(id: item.id, name: item.name!, teacher: item.teacherId!, description: item.descriptionSubject!))
+            //конвертація об'єкта та додавання до массиву
+            result.append(Subject(object: item))
         }
         return result
     }
     
     func saveData(_ itemSource: [Subject]) -> Void {
         for item in itemSource {
+            //створення нового або оновлення даних вже існуючого об'єкта
             let _ = try? SubjectCD.initOrFind(by: item)
+            //збереження контексту
             try? context.save()
         }
     }

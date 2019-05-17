@@ -340,49 +340,9 @@
 		ED26AAAA22008C87003F1381 /* LoginRegisterSwitcher */ = {
 			isa = PBXGroup;
 			children = (
-				ED26AAAF22008CFA003F1381 /* LoginRegisterSwitcherView */,
-				ED26AAAE22008CEA003F1381 /* LoginRegisterSwitcherRouter */,
-				ED26AAAD22008CDF003F1381 /* LoginRegisterSwitcherPresenter */,
-				ED26AAAC22008CBD003F1381 /* LoginRegisterSwitcherInteractor */,
-				ED26AAAB22008CB1003F1381 /* LoginRegisterSwitcherConfigurator */,
-			);
-			path = LoginRegisterSwitcher;
-			sourceTree = "<group>";
-		};
-		ED26AAAB22008CB1003F1381 /* LoginRegisterSwitcherConfigurator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginRegisterSwitcherConfigurator;
-			sourceTree = "<group>";
-		};
-		ED26AAAC22008CBD003F1381 /* LoginRegisterSwitcherInteractor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginRegisterSwitcherInteractor;
-			sourceTree = "<group>";
-		};
-		ED26AAAD22008CDF003F1381 /* LoginRegisterSwitcherPresenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginRegisterSwitcherPresenter;
-			sourceTree = "<group>";
-		};
-		ED26AAAE22008CEA003F1381 /* LoginRegisterSwitcherRouter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginRegisterSwitcherRouter;
-			sourceTree = "<group>";
-		};
-		ED26AAAF22008CFA003F1381 /* LoginRegisterSwitcherView */ = {
-			isa = PBXGroup;
-			children = (
 				EDDEB47A21F0A71000330EE1 /* ViewController.swift */,
 			);
-			path = LoginRegisterSwitcherView;
+			path = LoginRegisterSwitcher;
 			sourceTree = "<group>";
 		};
 		ED403283228AD9E7007FD2C2 /* Profile */ = {
@@ -799,7 +759,6 @@
 				ED49B404227066EE003AFFE5 /* AnswersList */,
 				EDBEF68D226F9595009E7865 /* LiveLecture */,
 				ED26AAAA22008C87003F1381 /* LoginRegisterSwitcher */,
-				EDA550EF21FB4ECF0008B9DC /* ForgetPassword */,
 				ED9ED44521F9E5FB00761C09 /* Registration */,
 				EDF66BB221F4CEED00A4974A /* Login */,
 			);
@@ -817,6 +776,7 @@
 		EDF9B17F21F30E1000599888 /* common-utils */ = {
 			isa = PBXGroup;
 			children = (
+				EDA550EF21FB4ECF0008B9DC /* ForgetPassword */,
 				EDF66BAB21F4878F00A4974A /* ui-utils */,
 				EDF66BA921F4703700A4974A /* AppConstants.swift */,
 				ED819BC421F60F5E007956F3 /* ErrorsExtension.swift */,

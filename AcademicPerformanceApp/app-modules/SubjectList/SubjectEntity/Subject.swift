@@ -30,6 +30,13 @@ struct Subject: Firebaseable {
         self.description = value["description"] as? String
         self.teacher = value["teacher"] as? String
     }
+    
+    init(object: SubjectCD) {
+        self.id = object.id
+        self.description = object.descriptionSubject
+        self.name = object.name
+        self.teacher = object.teacherId
+    }
 }
 
 @objc(SubjectCD)
@@ -43,17 +50,17 @@ class SubjectCD: NSManagedObject {
 extension SubjectCD {
     class func initOrFind(by object: Subject)  throws -> SubjectCD {
         let context = AppDelegate.viewContext
+        //формування запиту до бази даних
         let request: NSFetchRequest<SubjectCD> = SubjectCD.fetchRequest() as! NSFetchRequest<SubjectCD>
         let predicate = NSPredicate(format: "id = %@", "\(object.id!)")
         
         request.predicate = predicate
-        
+        //пошук об'єктів у бд, які відповідають запиту
         do {
             let matches = try context.fetch(request)
             if matches.count > 0 {
                 return matches[0]
             }
-            
         } catch {
             throw error
         }

@@ -22,12 +22,15 @@ class RegistrationPresenter: RegistrationPresenterProtocol {
         
     }
     
-    func performRegistration(username: String?, email: String?, password: String?) {
-        guard let username = username, let email = email,let password = password else {
+    func performRegistration(username: String?, email: String?, password: String?, phoneNumber: String?) {
+        guard let username = username,
+            let email = email,
+            let password = password,
+            let phoneNumber = phoneNumber else {
             registrationDidFail(with: ErrorPointer.none as! Error)
             return
          }
-        interactor.performRegistration(username: username, email: email, password: password)
+        interactor.performRegistration(username: username, email: email, password: password, phoneNumber: phoneNumber)
     }
     
     func registrationDidComplete() {

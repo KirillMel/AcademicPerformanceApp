@@ -14,6 +14,7 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol, Vi
     var presenter: RegistrationPresenterProtocol!
     
     //MARK: - Outlets
+    @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -31,6 +32,7 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol, Vi
         emailTextField.text = ""
         passwordTextField.text = ""
         usernameTextField.text = ""
+        phoneTextField.text = ""
     }
     
     func setUpUI() {
@@ -45,6 +47,10 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol, Vi
         setBorder(for: emailTextField)
         setShadow(for: emailTextField)
         
+        phoneTextField.setPaddingWithImage(imageName: "phoneNumber")
+        setBorder(for: phoneTextField)
+        setShadow(for: phoneTextField)
+        
         passwordTextField.setPaddingWithImage(imageName: "passwordIcon")
         setBorder(for: passwordTextField)
         setShadow(for: passwordTextField)
@@ -54,15 +60,15 @@ class RegistrationViewController: UIViewController, RegistrationViewProtocol, Vi
     
     @IBAction func registerButtonClicked(_ sender: Any) {
         activityIndicator.startAnimating()
-        performRegistration(username: usernameTextField.text, email: emailTextField.text, password: passwordTextField.text)
+        performRegistration(username: usernameTextField.text, email: emailTextField.text, password: passwordTextField.text, phoneNumber: phoneTextField.text)
     }
     
     func configureView(with username: String, email: String) {
         
     }
     
-    func performRegistration(username: String?, email: String?, password: String?) {
-        presenter.performRegistration(username: username, email: email, password: password)
+    func performRegistration(username: String?, email: String?, password: String?, phoneNumber: String?) {
+        presenter.performRegistration(username: username, email: email, password: password, phoneNumber: phoneNumber)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -15,7 +15,7 @@ protocol RegistrationPresenterProtocol: class {
     
     func configureView() -> Void
     //View to presenter, presenter to interactor
-    func performRegistration(username: String?, email: String?, password: String?) -> Void
+    func performRegistration(username: String?, email: String?, password: String?, phoneNumber: String?) -> Void
     //interactor to presenter, presenter to view
     func registrationDidComplete() -> Void
     

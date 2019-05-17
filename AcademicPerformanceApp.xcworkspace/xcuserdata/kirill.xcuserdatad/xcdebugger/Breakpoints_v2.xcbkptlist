@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-ui/Cells/AnswerCell.swift"
-            timestampString = "577805486.734629"
+            timestampString = "579720527.317337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "handleTap(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-ui/Cells/AnswerCell.swift"
-            timestampString = "577805486.734756"
+            timestampString = "579720527.317448"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-ui/Cells/AnswerCell.swift"
-            timestampString = "577805486.7348469"
+            timestampString = "579720527.31751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-modules/AnswersList/AnswersListViewController.swift"
-            timestampString = "579533851.624779"
+            timestampString = "579720527.31757"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-modules/SubjectList/SubjectListView/SubjectListViewController.swift"
-            timestampString = "579533851.625044"
+            timestampString = "579535560.657443"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-modules/SubjectList/SubjectListView/SubjectListViewController.swift"
-            timestampString = "579533851.62512"
+            timestampString = "579535560.657517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-modules/SubjectList/SubjectListView/SubjectListViewController.swift"
-            timestampString = "579533851.6251841"
+            timestampString = "579535560.657598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-modules/SubjectList/SubjectListView/SubjectListViewController.swift"
-            timestampString = "579533851.625247"
+            timestampString = "579535560.657657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-modules/SubjectList/SubjectListView/SubjectListViewController.swift"
-            timestampString = "579533851.625309"
+            timestampString = "579535560.657716"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -265,24 +265,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AcademicPerformanceApp/app-modules/Registration/RegistrationView/RegistrationViewController.swift"
-            timestampString = "579533851.625374"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "registerButtonClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-services/AuthFBService.swift"
-            timestampString = "579247585.9959"
+            timestampString = "579783820.765772"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -298,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-modules/Registration/RegistrationPresenter/RegistrationPresenter.swift"
-            timestampString = "579192229.9456919"
+            timestampString = "579783820.7658449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "registrationDidFail(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,28 +298,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AcademicPerformanceApp/app-modules/Registration/RegistrationPresenter/RegistrationPresenter.swift"
-            timestampString = "579192229.945755"
+            timestampString = "579783820.765907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "registrationDidComplete()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AcademicPerformanceApp/app-modules/LiveLecture/LiveLectureViewController.swift"
-            timestampString = "579533851.62594"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

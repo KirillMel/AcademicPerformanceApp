@@ -20,7 +20,7 @@ class RegistrationInteractor: RegistrationInteractorProtocol {
     }
     
     //MARK: - RegistrationInteractorProtocol implementation
-    func performRegistration(username: String, email: String, password: String) {
+    func performRegistration(username: String, email: String, password: String, phoneNumber: String) {
         if (!validationService.validate(for: username)) {
             presenter.registrationDidFail(with: validationService.error!)
             return
@@ -30,13 +30,7 @@ class RegistrationInteractor: RegistrationInteractorProtocol {
             return
         }
         
-//        if (!authorizationService.loginWithAPICall(route: "https://api.openaq.org/v1/cities", username: username, password: password)){
-//            presenter.registrationDidFail(with: authorizationService.error ?? NetworkError.unavailable)
-//        } else {
-//            presenter.registrationDidComplete()//sent user to a presenter
-//        }
-        
-        self.authService.createUser(email, password, username) { error in
+        self.authService.createUser(email, password, username, phoneNumber) { error in
             if let error = error {
                 self.presenter.registrationDidFail(with: error)
             } else {

@@ -38,6 +38,9 @@ class LiveLectureViewController: UIViewController {
             self.title = lecture.description!
             self.loadQuestions(forLectureId: (currentLecture?.id!)!)
             self.isLive = false
+            if (lecture.description == "Inheritance") {
+                self.isLive = true
+            }
         }
         else {
             self.isLive = true

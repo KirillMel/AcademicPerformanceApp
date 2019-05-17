@@ -13,11 +13,13 @@ class Answer: Firebaseable {
     var id: String?
     var text: String?
     var questionId: String?
+    var accepted: Bool?
     
-    init(id: String, text: String, questionId: String ) {
+    init(id: String, text: String, questionId: String, accepted: Bool) {
         self.id = id
         self.text = text
         self.questionId = questionId
+        self.accepted = accepted
     }
     
     required init?(snapshot: DataSnapshot) {
@@ -25,5 +27,6 @@ class Answer: Firebaseable {
         self.text = value["text"] as? String
         self.id = value["id"] as? String
         self.questionId = value["questionId"] as? String
+        self.accepted = value["accepted"] as? Bool
     }
 }

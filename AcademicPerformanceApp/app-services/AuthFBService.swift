@@ -35,7 +35,7 @@ class AuthorizationService {
         }
     }
     
-    func createUser(_ email: String, _ password: String, _ name: String, completion: @escaping (Error?) -> Void) {
+    func createUser(_ email: String, _ password: String, _ name: String, _ phoneNumber: String,completion: @escaping (Error?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { authresult, error in
             if let error = error {
                 completion(error)
@@ -44,7 +44,7 @@ class AuthorizationService {
             
             let id = (authresult?.user.uid)!
             
-            let value = ["group": "ti-51", "isteacher": false, "name": name] as [String : Any]
+            let value = ["group": "ti-51", "isteacher": false, "name": name, "phone" : phoneNumber, "mail" : email] as [String : Any]
             
             self.ref.child("users").child(id).setValue(value)
             

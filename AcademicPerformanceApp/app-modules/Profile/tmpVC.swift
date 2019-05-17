@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var phoneNumberLabel: UILabel!
     let items = [("about","About"), ("exit","Log out")]
     
     override func viewDidLoad() {
@@ -33,14 +34,16 @@ class ProfileViewController: UIViewController {
         titleLabel.font = UIFont(name: "noteworthy-bold", size: 28)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         let group = user.group?.uppercased()
-        titleLabel.text = "Student \(group ?? "")"
+        let text = (user.isTeacher!) ? "Teacher" : "Student \(group ?? "")"
+        titleLabel.text = text
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.text = user.name
+        nameLabel.text = "👨 " + user.name!
         nameLabel.font = UIFont.boldSystemFont(ofSize: 17.0)
         
         emailLabel.translatesAutoresizingMaskIntoConstraints = false
-        emailLabel.text = user.email
+        emailLabel.text = "📧 \(user.email ?? "user@gmail.com")"
         
+        phoneNumberLabel.text = "📞 \(user.phone ?? "+3809545455")"
         
         personalImage.image = UIImage(named: "student")
     }

@@ -17,6 +17,10 @@ class AnswerCell: UITableViewCell {
         }
     }
     
+    var itemBuilder = EntityBuilder()
+    
+    var answer: Answer?
+    
     @IBOutlet weak var AcceptButton: UIButton!
     @IBOutlet weak var acceptImage: UIImageView!
     @IBOutlet weak var answerLabel: UILabel!
@@ -25,7 +29,13 @@ class AnswerCell: UITableViewCell {
     @IBOutlet weak var likeImage: UIImageView!
     @IBOutlet weak var likeLabel: UILabel!
     @IBAction func AcceptBitton_Clicked(_ sender: Any) {
-        acceptImage.isHidden = false;
+        acceptImage.isHidden = !acceptImage.isHidden;
+        answer?.accepted = !answer!.accepted!
+       // AcceptButton.titleLabel?.text = (answer!.accepted!) ? "Not accept" : "Accept"
+        
+        let message = ["accepted" : answer?.accepted!, "id" : answer?.id!, "text" : answer?.text!, "questionId" : answer?.questionId!] as [String : Any]
+        
+        itemBuilder.build(folder: "answers", value: message, id: answer!.id!)
     }
     
     override func awakeFromNib() {

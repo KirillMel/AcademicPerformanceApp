@@ -49,7 +49,7 @@ class LoginViewController: UIViewController, LoginViewProtocol, ViperModuleTrans
         loginButton.layer.cornerRadius = MAIN_CORNER_RADIUS
         setShadow(for: loginButton)
         
-        loginTextField.setPaddingWithImage(imageName: "loginIcon")
+        loginTextField.setPaddingWithImage(imageName: "emailIcon")
         setBorder(for: loginTextField)
         setShadow(for: loginTextField)
         

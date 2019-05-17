@@ -77,11 +77,11 @@ class AnswersListviewController: UIViewController {
 extension AnswersListviewController: AnswerDelegate {
     func addAnswer(_ answer: String) {
         let id = UUID()
-        let answer = Answer(id: "\(id)", text: answer, questionId: self.currentQuestion!.id!)
-        answers.append(answer)
+        let answer = Answer(id: "\(id)", text: answer, questionId: self.currentQuestion!.id!, accepted:  false)
+        //answers.append(answer)
         tableView.reloadData()
         
-        let newValue = ["id": answer.id!, "text": answer.text!, "questionId": answer.questionId!]
+        let newValue = ["id": answer.id!, "text": answer.text!, "questionId": answer.questionId!, "accepted": false] as [String : Any]
         
         builder.build(folder: "answers", value: newValue, id: answer.id!)
     }
@@ -94,13 +94,13 @@ extension AnswersListviewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell") as! AnswerCell
-        
+        cell.answer = answers[indexPath.row]
         cell.answerLabel.text = answers[indexPath.row].text ?? ""
         cell.acceptImage.image = UIImage(named: "accept")
-        cell.acceptImage.isHidden = true
-        cell.AcceptButton.isHidden = true
+        cell.acceptImage.isHidden = !answers[indexPath.row].accepted!
+        cell.AcceptButton.isHidden = !UserDefaults.standard.getUser()!.isTeacher!
         cell.likeImage.image = UIImage(named:"like")
-        cell.viewForStudent.isHidden = false
+        cell.viewForStudent.isHidden = true
         cell.numberOfLikes = 100
         cell.liked = false
         
