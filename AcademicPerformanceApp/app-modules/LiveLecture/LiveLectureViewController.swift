@@ -57,25 +57,7 @@ class LiveLectureViewController: UIViewController {
                     self.title = result.first?.lectureName ?? "Lecture"
                     self.currentLecture = Lecture(id: result.first!.lectureId!, subject: "Live", description: result.first!.lectureName!)
                     
-                    self.liveObserving.loadItems(complition: { result in
-                        
-                        var tmpQuestions = [Question]()
-                        
-                        for item in result! {
-                            if item.lectureId! == self.currentLecture!.id! {
-                                tmpQuestions.append(item)
-                            }
-                        }
-                        
-                        let test = tmpQuestions
-                        
-                        self.questions = tmpQuestions
-                        
-                        if (self.questions.count > 0) {
-                            self.tableView.reloadData()
-                            self.tableView.scrollToRow(at: IndexPath(row: self.questions.count - 1, section: 0), at: .bottom, animated: true)
-                        }
-                    })
+                    self.loadQuestions(forLectureId: result.first!.lectureId!)
                 }
             }
         }
@@ -96,12 +78,12 @@ class LiveLectureViewController: UIViewController {
             return
         }
         
-        loader.loadItems(folderName: "questions") { result in
+        self.liveObserving.loadItems(complition: { result in
             
             var tmpQuestions = [Question]()
             
             for item in result! {
-                if item.lectureId! == id {
+                if item.lectureId! == self.currentLecture!.id! {
                     tmpQuestions.append(item)
                 }
             }
@@ -112,7 +94,7 @@ class LiveLectureViewController: UIViewController {
                 self.tableView.reloadData()
                 self.tableView.scrollToRow(at: IndexPath(row: self.questions.count - 1, section: 0), at: .bottom, animated: true)
             }
-        }
+        })
     }
     
     @IBAction func sendButton_Clicked(_ sender: Any) {
