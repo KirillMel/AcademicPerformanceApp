@@ -16,11 +16,22 @@ class AnswerScreenViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     //MARK: - delegate, which connect to answer list
     var answerDelegate: AnswerDelegate!
+    var answerText: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setUpUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let text = answerText {
+            textView?.text = text
+        } else {
+            textView?.text = "Your Answer"
+        }
     }
     
     func setUpUI() {

@@ -62,23 +62,31 @@ class AuthorizationService {
     }
     
     private func saveLocal(_ user: User) {
+        //створення об'єкта, який буде кодувати дані користувача
         let encoder = JSONEncoder()
+        //кодування
         if let encoded = try? encoder.encode(user) {
             let defaults = UserDefaults.standard
+            //додавання закодованих даних до UserDefaults за ключем
             defaults.set(encoded, forKey: "currentUser")
         }
     }
 }
 
+//розширення UserDefaults для швидкого запита користувача
 extension UserDefaults {
     func getUser() -> User? {
         let defaults = UserDefaults.standard
+        //запит до UserDefaults за ключем
         if let savedUser = defaults.object(forKey: "currentUser") as? Data {
+            //створення декодуючого об'єкта
             let decoder = JSONDecoder()
+            //декодування
             if let loadedUser = try? decoder.decode(User.self, from: savedUser) {
                 return loadedUser
             }
         }
+        //якщо не вийшло декодувати об'єкт, то повертаємо nil
         return nil
     }
 }

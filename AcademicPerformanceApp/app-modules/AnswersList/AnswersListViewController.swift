@@ -22,13 +22,16 @@ class AnswersListviewController: UIViewController {
     let builder = EntityBuilder()
     
     var currentQuestion: Question?
+    var position: Int!
+    var id: String!
+    var isAppend: Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.allowsSelection = false
+        //self.tableView.allowsSelection = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +67,8 @@ class AnswersListviewController: UIViewController {
     }
     
     @IBAction func answerButton_Clicked(_ sender: Any) {
+        self.id = currentQuestion!.id! + "\(answers.count)"
+        self.isAppend = true
         performSegue(withIdentifier: "segueToModal", sender: nil)
     }
     
@@ -71,12 +76,13 @@ class AnswersListviewController: UIViewController {
         let vc = segue.destination as! AnswerScreenViewController
         
         vc.answerDelegate = self
+        vc.answerText = isAppend ? nil : answers[position].text!
     }
 }
 
 extension AnswersListviewController: AnswerDelegate {
     func addAnswer(_ answer: String) {
-        let id = currentQuestion!.id! + "\(answers.count)"
+        //let id = currentQuestion!.id! + "\(answers.count)"
         let answer = Answer(id: id, text: answer, questionId: self.currentQuestion!.id!, accepted:  false)
         //answers.append(answer)
         //tableView.reloadData()
@@ -101,9 +107,23 @@ extension AnswersListviewController: UITableViewDelegate, UITableViewDataSource 
         cell.AcceptButton.isHidden = !UserDefaults.standard.getUser()!.isTeacher!
         cell.likeImage.image = UIImage(named:"like")
         cell.viewForStudent.isHidden = true
-        cell.numberOfLikes = 100
         cell.liked = false
         
         return cell
-    }   
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
+    {
+        let update = UITableViewRowAction(style: .normal, title: "Edit") { action, index in
+            self.position = index.row
+            self.id = self.answers[self.position].id!
+            self.isAppend = false
+            self.performSegue(withIdentifier: "segueToModal", sender: nil)
+        }
+        return [update]
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return UserDefaults.standard.getUser()!.isTeacher ?? false
+    }
 }

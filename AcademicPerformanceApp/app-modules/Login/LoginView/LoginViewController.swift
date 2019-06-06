@@ -59,20 +59,6 @@ class LoginViewController: UIViewController, LoginViewProtocol, ViperModuleTrans
     }
     
     @objc func forgetPasswordClicked(_ sender: Any) {
-//        presenter.moveToFP()
-//        UIView.animate(withDuration: 0.15, delay: 0.1, options: .curveEaseOut,
-//                       animations: {
-//                        self.loginButton.alpha = 0
-//                        self.loginTextField.alpha = 0
-//                        self.passwordTextField.alpha = 0
-//                        self.forgetPasswordLabel.alpha = 0
-//        },
-//                       completion: { _ in self.loginButton.isHidden = true
-//                        self.loginTextField.isHidden = true
-//                        self.passwordTextField.isHidden = true
-//                        self.forgetPasswordLabel.isHidden = true
-//        })
-//        parentController?.viewWillDisappear(true)
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {

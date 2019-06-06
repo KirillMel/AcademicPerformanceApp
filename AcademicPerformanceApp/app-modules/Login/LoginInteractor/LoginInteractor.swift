@@ -23,11 +23,6 @@ class LoginInteractor: LoginInteractorProtocol {
             presenter.loginDidFail(with: validationService.error!)
             return
         }
-        
-//        if (!authorizationService.loginWithAPICall(route: "https://api.openaq.org/v1/cities", username: "f", password: "f")){
-//            presenter.loginDidFail(with: authorizationService.error ?? NetworkError.unavailable)
-//        }
-        
         authFB.perform(username, password) { error in
             if let error = error {
                 self.presenter.loginDidFail(with: error)

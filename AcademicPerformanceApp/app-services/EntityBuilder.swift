@@ -14,7 +14,6 @@ class EntityBuilder {
     
     func build(folder: String, value: [String: Any], id: String) {
         let group = UserDefaults.standard.getUser()!.group!
-        
-        self.ref.child("groups").child(group).child(folder).child(id).setValue(value)
+    self.ref.child("groups").child(group).child(folder).child(id).setValue(value)
     }
 }
